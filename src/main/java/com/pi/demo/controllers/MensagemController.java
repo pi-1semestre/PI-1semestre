@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api/v1/mensagens")
@@ -22,10 +23,18 @@ public class MensagemController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Mensagem> getMensagemById(@PathVariable Long id) {
-        return mensagemService.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        Mensagem mensagem = mensagemService.findById(id);
+        if (mensagem == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(mensagem);
     }
+
+    @GetMapping("/status/{status}")
+    public ResponseEntity<List<Mensagem>> getMensagensByStatus(@PathVariable boolean status) {
+        return ResponseEntity.ok(mensagemService.findByStatusTrue());
+    }
+    
 
     @PostMapping
     public ResponseEntity<Mensagem> createMensagem(@RequestBody Mensagem mensagem) {
@@ -34,7 +43,7 @@ public class MensagemController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Mensagem> updateMensagem(@PathVariable Long id, @RequestBody Mensagem mensagem) {
-        if (!mensagemService.findById(id).isPresent()) {
+        if (mensagemService.findById(id) == null) {
             return ResponseEntity.notFound().build();
         }
         mensagem.setIdMensagem(id);
@@ -43,7 +52,7 @@ public class MensagemController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMensagem(@PathVariable Long id) {
-        if (!mensagemService.findById(id).isPresent()) {
+        if (mensagemService.findById(id) == null) {
             return ResponseEntity.notFound().build();
         }
         mensagemService.deleteById(id);

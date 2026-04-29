@@ -5,7 +5,6 @@ import com.pi.demo.repositories.MensagemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class MensagemService {
@@ -17,8 +16,12 @@ public class MensagemService {
         return mensagemRepository.findAll();
     }
 
-    public Optional<Mensagem> findById(Long id) {
-        return mensagemRepository.findById(id);
+    public List<Mensagem> findByStatusTrue() {
+        return mensagemRepository.findByStatusTrue();
+    }
+
+    public Mensagem findById(Long id) {
+        return mensagemRepository.findById(id).orElse(null);
     }
 
     public void deleteById(Long id) {

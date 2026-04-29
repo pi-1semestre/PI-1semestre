@@ -128,7 +128,7 @@ public class Animal {
         this.administrador = administrador;
     }
 
-    public boolean isStatus() {
+    public boolean getStatus() {
         return status;
     }
 
