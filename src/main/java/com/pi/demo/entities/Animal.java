@@ -24,6 +24,12 @@ public class Animal {
     @Column(name = "idade", nullable = false, length = 45)
     private String idade;
 
+    @Column(name = "status", nullable = false)
+    private boolean status = true;
+
+    @Column(name = "imagem", nullable = false, length = 255)
+    private String imagem;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tb_especie_idEspecie", nullable = false)
     private Especie especie;
@@ -46,10 +52,11 @@ public class Animal {
 
     public Animal() {}
 
-    public Animal(Long idAnimal, String nomeAnimal, String idade, Especie especie, Porte porte, Pelagem pelagem, Sexo sexo, Administrador administrador) {
+    public Animal(Long idAnimal, String nomeAnimal, String idade, String imagem, Especie especie, Porte porte, Pelagem pelagem, Sexo sexo, Administrador administrador) {
         this.idAnimal = idAnimal;
         this.nomeAnimal = nomeAnimal;
         this.idade = idade;
+        this.imagem = imagem;
         this.especie = especie;
         this.porte = porte;
         this.pelagem = pelagem;
@@ -119,5 +126,21 @@ public class Animal {
 
     public void setAdministrador(Administrador administrador) {
         this.administrador = administrador;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }
