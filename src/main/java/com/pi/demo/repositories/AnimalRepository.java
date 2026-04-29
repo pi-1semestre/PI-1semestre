@@ -15,6 +15,7 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
     List<Animal> findByPelagemIdPelagem(Long pelagemId);
     List<Animal> findBySexoIdSexo(Long sexoId);
     List<Animal> findByNomeAnimalContaining(String nome);
+    List<Animal> findByStatusTrue();
 
     @Query("SELECT a FROM Animal a WHERE a.especie.especie = :especieNome")
     List<Animal> findByEspecieNome(@Param("especieNome") String especieNome);

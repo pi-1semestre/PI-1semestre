@@ -24,6 +24,18 @@ public class AnimalService {
     public void deleteById(Long id) {
         animalRepository.deleteById(id);
     }
+    public List<Animal> findByPorteId(Long porteId) {
+        return animalRepository.findByPorteIdPorte(porteId);
+    }
+    public List<Animal> findByPelagemId(Long pelagemId) {
+        return animalRepository.findByPelagemIdPelagem(pelagemId);
+    }
+    public List<Animal> findBySexoId(Long sexoId) {
+        return animalRepository.findBySexoIdSexo(sexoId);
+    }
+    public List<Animal> findByStatusTrue() {
+        return animalRepository.findByStatusTrue();
+    }
     public List<Animal> findByEspecieId(Long especieId) {
         return animalRepository.findByEspecieIdEspecie(especieId);
     }
