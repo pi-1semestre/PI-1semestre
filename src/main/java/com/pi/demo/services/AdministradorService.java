@@ -29,6 +29,16 @@ public class AdministradorService {
         return Optional.ofNullable(administradorRepository.findByEmailAdm(email));
     }
 
+    public Administrador autenticarAdministrador(String email, String senha) {
+        Administrador administrador = administradorRepository.findByEmailAdm(email);
+
+        if (administrador != null && administrador.getSenha().equals(senha)) {
+            return administrador;
+        } else {
+            return null;
+        }
+    }
+
     public void deleteById(Long id) {
         administradorRepository.deleteById(id);
     }

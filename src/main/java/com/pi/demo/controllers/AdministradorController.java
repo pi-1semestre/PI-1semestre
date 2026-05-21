@@ -40,6 +40,17 @@ public class AdministradorController {
         return ResponseEntity.ok(administradorService.findByAnimalNome(nome));
     }
 
+    @PostMapping("/login")
+    public Administrador login(@RequestBody Administrador loginRequest) {
+        Administrador administrador = administradorService.autenticarAdministrador(loginRequest.getEmailAdm(), loginRequest.getSenha());
+
+        if (administrador != null) {
+            return administrador;
+        } else {
+            return null;
+        }
+    }
+
     @PostMapping
     public ResponseEntity<Administrador> createAdministrador(@RequestBody Administrador administrador) {
         return ResponseEntity.ok(administradorService.save(administrador));
