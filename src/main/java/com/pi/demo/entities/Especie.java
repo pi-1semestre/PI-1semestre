@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Especie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idEspecie")
+    @Column(name = "id_especie")
     private Long idEspecie;
 
     @Column(name = "especie", nullable = false, length = 45)

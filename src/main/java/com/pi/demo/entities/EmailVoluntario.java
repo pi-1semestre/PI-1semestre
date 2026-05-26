@@ -3,11 +3,11 @@ package com.pi.demo.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_emailVoluntario")
+@Table(name = "tb_email_voluntario")
 public class EmailVoluntario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idEmailVoluntario")
+    @Column(name = "id_email_voluntario")
     private Long idEmailVoluntario;
 
     @Column(name = "email", nullable = false, length = 255)

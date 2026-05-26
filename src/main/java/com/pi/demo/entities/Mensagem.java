@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Mensagem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idMensagem")
+    @Column(name = "id_mensagem")
     private Long idMensagem;
 
     @Column(name = "descricao", nullable = false, length = 255)
@@ -16,14 +16,14 @@ public class Mensagem {
     @Column(name = "status", nullable = false)
     private boolean status = true;
 
-    @Column(name = "imagemAntes", nullable = false, length = 255)
+    @Column(name = "imagem_antes", nullable = false, length = 255)
     private String imagemAntes;
 
-    @Column(name = "imagemDepois", nullable = false, length = 255)
+    @Column(name = "imagem_depois", nullable = false, length = 255)
     private String imagemDepois;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_emailMensagem_idEmailMensagem", nullable = false)
+    @JoinColumn(name = "tb_email_mensagem_id_email_mensagem", nullable = false)
     private EmailMensagem emailMensagem;
 
     public Mensagem() {}

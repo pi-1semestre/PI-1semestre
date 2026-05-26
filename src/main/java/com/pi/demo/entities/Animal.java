@@ -15,10 +15,10 @@ import jakarta.persistence.Table;
 public class Animal {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idAnimal")
+    @Column(name = "id_animal")
     private Long idAnimal;
 
-    @Column(name = "nomeAnimal", nullable = false, length = 45)
+    @Column(name = "nome_animal", nullable = false, length = 45)
     private String nomeAnimal;
 
     @Column(name = "idade", nullable = false, length = 45)
@@ -31,23 +31,23 @@ public class Animal {
     private String imagem;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_especie_idEspecie", nullable = false)
+    @JoinColumn(name = "tb_especie_id_especie", nullable = false)
     private Especie especie;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_porte_idPorte", nullable = false)
+    @JoinColumn(name = "tb_porte_id_porte", nullable = false)
     private Porte porte;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_pelagem_idPelagem", nullable = false)
+    @JoinColumn(name = "tb_pelagem_id_pelagem", nullable = false)
     private Pelagem pelagem;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_sexo_idSexo", nullable = false)
+    @JoinColumn(name = "tb_sexo_id_sexo", nullable = false)
     private Sexo sexo;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_administrador_idAdministrador", nullable = false)
+    @JoinColumn(name = "tb_administrador_id_administrador", nullable = false)
     private Administrador administrador;
 
     public Animal() {}

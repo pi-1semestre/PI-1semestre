@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Voluntario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idVoluntario")
+    @Column(name = "id_voluntario")
     private Long idVoluntario;
 
     @Column(name = "nome", nullable = false, length = 45)
@@ -17,7 +17,7 @@ public class Voluntario {
     private Integer idade;
 
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_emailVoluntario_idEmailVoluntario", nullable = false)
+    @JoinColumn(name = "tb_email_voluntario_id_email_voluntario", nullable = false)
     private EmailVoluntario emailVoluntario;
 
     public Voluntario() {}

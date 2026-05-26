@@ -13,10 +13,10 @@ import jakarta.persistence.Table;
 public class Administrador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idAdministrador")
+    @Column(name = "id_administrador")
     private Long idAdministrador;
 
-    @Column(name = "emailAdm", nullable = false, length = 255)
+    @Column(name = "email_adm", nullable = false, length = 255)
     private String emailAdm;
 
     @Column(name = "senha", nullable = false, length = 255)
