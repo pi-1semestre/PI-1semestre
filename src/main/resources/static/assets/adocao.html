@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Pet - Quero Adotar!</title>
+    <link rel="stylesheet" href="./css/adocao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="top-bar-decorator"></div>
+
+       <div class="faixa-topo">
+        <div class="faixa-amarela"></div>
+        <div class="faixa-verde"></div>
+        <div class="faixa-vermelha"></div>
+    </div>
+
+    <header class="cabecalho">
+        <img src="./imgs/Logo.png" alt="Apoio Pet" class="logo">
+
+        <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
+
+        <div class="fundo-menu" id="fundoMenu"></div>
+
+        <nav class="menu" id="menu">
+            <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
+
+            <a href="#">Início</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Casos</a>
+            <a href="#">Denúncia</a>
+            <a href="#">Contato</a>
+            <a href="#" class="btn-ajuda">Como ajudar</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1>Quero adotar!</h1>
+        <div class="search-container">
+            <div class="checkbox-group">
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="check-gato">
+                    <span class="checkmark"></span> Gato
+                </label>
+                <label class="custom-checkbox">
+                    <input type="checkbox" id="check-cachorro">
+                    <span class="checkmark"></span> Cachorro
+                </label>
+            </div>
+            <button class="btn-search">Procure um amiguinho</button>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div id="pets-grid" class="pets-grid">
+            <div class="loading">Carregando amiguinhos...</div>
+        </div>
+    </main>
+
+   <footer class="rodape">
+
+        <div class="rodape-grid">
+
+            <div class="rodape-coluna">
+                <h3>Onde estamos</h3>
+
+                <div class="mapa">
+                    <iframe 
+                        src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Fale conosco</h3>
+
+                <a href="tel:08000481212" class="rodape-botao">
+                    <img src="./imgs/adocao_imagem/Telefone.png" alt="Telefone">
+                    0800-048-1212
+                </a>
+
+                <a href="https://wa.me/554832314000" class="rodape-botao">
+                    <img src="./imgs/adocao_imagem/WhatsApp.png" alt="WhatsApp">
+                    (48) 3231-4000
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510" class="rodape-botao" target="_blank">
+                    <img src="./imgs/adocao_imagem/Localização.png" alt="Localização">
+                    R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
+                </a>
+
+                <a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
+                    <img src="./imgs/adocao_imagem/Email.png" alt="Email">
+                    faleconosco@fiesc.com.br
+                </a>
+            </div>
+
+            <div class="rodape-coluna ajuda">
+                <h3>Como ajudar</h3>
+
+                <a href="#" class="rodape-botao">
+                    <img src="./imgs/adocao_imagem/Pix.png" alt="Pix">
+                    Pix
+                </a>
+
+                <a href="#" class="rodape-botao">
+                    <img src="./imgs/adocao_imagem/Pessoa.png" alt="Pessoa">
+                    Seja voluntario
+                </a>
+
+                <div class="redes">
+                    <h3>Siga-nos</h3>
+
+                    <a href="#" aria-label="Instagram">
+                        <img src="./imgs/adocao_imagem/Instagram.png" alt="Instagram">
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <img src="./imgs/adocao_imagem/Facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="#" aria-label="Linkedin">
+                        <img src="./imgs/adocao_imagem/Linkedin.png" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="linha-rodape"></div>
+
+        <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const fecharMenu = document.getElementById("fecharMenu");
+        const menu = document.getElementById("menu");
+        const fundoMenu = document.getElementById("fundoMenu");
+
+        function abrirMenu() {
+            menu.classList.add("ativo");
+            fundoMenu.classList.add("ativo");
+        }
+
+        function fecharMenuLateral() {
+            menu.classList.remove("ativo");
+            fundoMenu.classList.remove("ativo");
+        }
+
+        btnMenu.addEventListener("click", abrirMenu);
+        fecharMenu.addEventListener("click", fecharMenuLateral);
+        fundoMenu.addEventListener("click", fecharMenuLateral);
+
+        const linksMenu = document.querySelectorAll(".menu a");
+
+        linksMenu.forEach(function (link) {
+            link.addEventListener("click", fecharMenuLateral);
+        });
+    </script>
+
+    <script src="adocao.js"></script>
+</body>
+</html>
