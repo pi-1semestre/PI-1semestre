@@ -1,0 +1,91 @@
+:root {
+    --bg-creme: #FDFBF4;
+    --vermelho-titulo: #C9302C;
+    --card-bg: #FFF;
+    --verde-publicar: #8CC63F;
+    --rosa-deletar: #D88A8A;
+    --rosa-switch-bg: #E2A7A7;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: var(--bg-creme); color: #333; min-height: 100vh; }
+
+/* Topo com Título Centralizado e Seta na Esquerda */
+.topo-pagina {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centraliza o título */
+    align-items: center;
+    margin-bottom: 35px;
+}
+.topo-pagina h1 { color: #D3A13B; font-size: 36px; font-weight: 700; }
+.btn-voltar-circulo {
+    position: absolute;
+    left: 0; /* Crava o botão na esquerda */
+    display: flex; align-items: center; justify-content: center;
+    width: 35px; height: 35px; background-color: #D3A13B; border-radius: 50%;
+}
+
+/* Ajuste Fiel do Card */
+.pet-card {
+    background-color: #F6EAC9; /* O amarelo clarinho exato do seu design */
+    border-radius: 6px;
+    padding: 12px;
+    display: flex; flex-direction: column; position: relative;
+}
+.btn-detalhes-mais {
+    position: absolute;
+    bottom: 12px; right: 12px;
+    width: 28px; height: 28px;
+    background-color: #E6DCAB; /* Fundo verdinho/amarelo do botão + */
+    border: none; border-radius: 4px; /* Mais quadrado, igual ao design */
+    color: #333; font-size: 20px; font-weight: bold; cursor: pointer;
+}
+/* Navbar */
+.navbar-admin { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background-color: var(--bg-creme); border-bottom: 1px solid #EFECE3; }
+.logo-container { display: flex; align-items: center; gap: 10px; font-size: 22px; }
+.logo-img { width: 50px; height: auto; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #8C7863; font-weight: 500; }
+
+/* Topo */
+.main-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+.topo-pagina { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.titulo-esquerda { display: flex; align-items: center; gap: 15px; }
+.topo-pagina h1 { color: var(--vermelho-titulo); font-size: 36px; font-weight: 700; }
+.btn-voltar-circulo { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; background-color: var(--vermelho-titulo); border-radius: 50%; text-decoration: none; }
+
+/* Switch Toggle (Idêntico ao design) */
+.toggle-container { display: flex; align-items: center; gap: 10px; background-color: var(--rosa-switch-bg); padding: 6px 14px; border-radius: 20px; }
+.toggle-container span { color: #555; font-size: 14px; font-weight: 600; }
+.switch { position: relative; display: inline-block; width: 34px; height: 18px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #B96B6B; border-radius: 34px; transition: .4s; }
+.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 2px; bottom: 2px; background-color: white; border-radius: 50%; transition: .4s; }
+input:checked + .slider { background-color: var(--vermelho-titulo); }
+input:checked + .slider:before { transform: translateX(16px); }
+
+/* Cards */
+.historias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.story-card { background-color: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+
+/* Barra Vermelha do Card */
+.card-topo-vermelho { background-color: var(--vermelho-titulo); color: white; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 15px; }
+.nome-pet { display: flex; align-items: center; gap: 8px; }
+.bolinha-amarela { width: 14px; height: 14px; background-color: #FFD700; border-radius: 50%; }
+
+.card-body { padding: 15px; background-color: #FDFBF4;}
+.card-images { display: flex; gap: 8px; margin-bottom: 15px; }
+.img-wrapper { flex: 1; position: relative; height: 130px; border-radius: 4px; overflow: hidden; }
+.img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.badge { position: absolute; bottom: 0; left: 0; padding: 2px 8px; font-size: 11px; font-weight: bold; color: white; }
+.badge-antes { background-color: #C9302C; }
+.badge-depois { background-color: #5CB85C; }
+
+.card-text { font-size: 13px; line-height: 1.4; color: #333; margin-bottom: 15px; }
+
+/* Botões Pílula */
+.card-actions { display: flex; gap: 10px; }
+.btn-action { flex: 1; padding: 8px; border: none; border-radius: 20px; font-size: 13px; font-weight: 600; color: white; cursor: pointer; }
+.btn-publicar { background-color: var(--verde-publicar); }
+.btn-deletar { background-color: var(--rosa-deletar); }

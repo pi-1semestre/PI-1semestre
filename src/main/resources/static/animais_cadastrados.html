@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Pet - Nova História</title>
+    <link rel="stylesheet" href="./assets/css/novas-historias.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="logo-container">
+            <img src="./assets/imgs/Logo.png" alt="Logo Apoio Pet" class="logo-img"> 
+            <span class="logo-text"><strong>Apoio</strong> Pet</span>
+        </div>
+        <nav class="nav-links" id="menu">
+            <a href="novas_historias.html" class="active">Novas Histórias</a>
+            <a href="cadastro_pet.html">Cadastrar</a>
+            <a href="animais_cadastrados.html">Animais Cadastrados</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <div class="topo-pagina">
+            <div class="titulo-esquerda">
+                <a href="javascript:history.back()" class="btn-voltar-circulo" aria-label="Voltar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
+                    </svg>
+                </a>
+                <h1>Nova História</h1>
+            </div>
+            
+            <div class="toggle-container">
+                <span>Todas</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggleTodas">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="historias-grid" id="grid-historias">
+            </div>
+    </main>
+
+    <script>
+        const API_URL = "http://localhost:8080/api/mensagens";
+        let todasAsHistorias = []; 
+
+        async function carregarHistorias() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error("Falha ao buscar");
+                todasAsHistorias = await response.json();
+                aplicarFiltro();
+            } catch (error) {
+                console.error("Erro de conexão:", error);
+            }
+        }
+
+        function renderizarCards(lista) {
+            const grid = document.getElementById("grid-historias");
+            grid.innerHTML = ""; 
+
+            lista.forEach(item => {
+                const card = document.createElement("div");
+                card.className = "story-card";
+                
+                // Usando placeholders caso o Java não envie nome e idade ainda
+                const nomePet = item.nomePet || "Micha";
+                const idadePet = item.idadePet || "3 Anos";
+                
+                card.innerHTML = `
+                    <div class="card-topo-vermelho">
+                        <div class="nome-pet"><div class="bolinha-amarela"></div> ${nomePet}</div>
+                        <div class="idade-pet">${idadePet}</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-images">
+                            <div class="img-wrapper">
+                                <img src="${item.imagem_antes}" alt="Antes">
+                                <span class="badge badge-antes">Antes</span>
+                            </div>
+                            <div class="img-wrapper">
+                                <img src="${item.imagem_depois}" alt="Depois">
+                                <span class="badge badge-depois">Depois</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <p class="card-text">${item.descricao}</p> 
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn-action btn-publicar" onclick="publicarHistoria(${item.id})">Publicar</button>
+                            <button class="btn-action btn-deletar" onclick="deletarHistoria(${item.id})">Deletar</button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function aplicarFiltro() {
+            const mostrarTodas = document.getElementById("toggleTodas").checked;
+            if (!mostrarTodas) {
+                const pendentes = todasAsHistorias.filter(h => h.status === 0 || h.status === false);
+                renderizarCards(pendentes);
+            } else {
+                renderizarCards(todasAsHistorias);
+            }
+        }
+
+        document.getElementById("toggleTodas").addEventListener("change", aplicarFiltro);
+
+        window.addEventListener("DOMContentLoaded", carregarHistorias);
+    </script>
+</body>
+</html>

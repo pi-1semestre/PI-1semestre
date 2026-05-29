@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Pet - Cadastrar Animal</title>
+    <link rel="stylesheet" href="./assets/css/cadastro_animal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="guard.js"></script>
+</head>
+<body>
+
+    <header class="navbar-admin">
+        <div class="logo-container">
+            <img src="./assets/imgs/Logo.png" alt="Logo Apoio Pet" class="logo-img"> 
+        </div>
+
+        <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
+
+        <div class="fundo-menu" id="fundoMenu"></div>
+
+        <nav class="nav-links" id="menu">
+            <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
+
+            <a href="novas_historias.html">Novas Histórias</a>
+            <a href="cadastro_animal.html" class="active">Cadastrar</a>
+            <a href="animais_cadastrados.html">Animais Cadastrados</a>
+            <a href="login_adm.html">Login</a>
+            <a href="#" id="btn-logout" class="btn-sair">Sair</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <div class="titulo-pagina">
+            <a href="javascript:history.back()" class="btn-voltar" aria-label="Voltar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.67 3.87L9.9 2.1L0 12L9.9 21.9L11.67 20.13L3.54 12L11.67 3.87Z" fill="#2E6F2E"/>
+                </svg>
+            </a>
+            <h1>Cadastro</h1>
+        </div>
+
+        <section class="form-box">
+            <div class="form-header">
+                Cadastrar animal
+            </div>
+            
+            <form id="form-cadastro-pet" class="form-body">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="nome_animal">Nome:</label>
+                        <input type="text" id="nome_animal" required placeholder="Nome do pet">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="idade">Idade:</label>
+                        <input type="text" id="idade" required placeholder="Ex: 2 anos">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="pelagem">Pelagem:</label>
+                        <input type="text" id="pelagem" required placeholder="Ex: Curta, longa...">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" required>
+                            <option value="" disabled selected hidden>Selecione...</option>
+                            <option value="M">Macho</option>
+                            <option value="F">Fêmea</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="porte">Porte:</label>
+                        <select id="porte" required>
+                            <option value="" disabled selected hidden>Selecione...</option>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="especie">Espécie:</label>
+                        <select id="especie" required>
+                            <option value="" disabled selected hidden>Selecione...</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="status">Status:</label>
+                        <select id="status" required>
+                            <option value="" disabled selected hidden>Selecione...</option>
+                            <option value="Disponível">Disponível para Adoção</option>
+                            <option value="Adotado">Adotado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group full-width">
+                    <label for="imagem">Imagem:</label>
+                    <input type="url" id="imagem" placeholder="URL da imagem do pet" required>
+                </div>
+
+                <button href="animais_cadastrados.html" type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const fecharMenu = document.getElementById("fecharMenu");
+        const menu = document.getElementById("menu");
+        const fundoMenu = document.getElementById("fundoMenu");
+
+        function abrirMenu() {
+            menu.classList.add("ativo");
+            fundoMenu.classList.add("ativo");
+        }
+
+        function fecharMenuLateral() {
+            menu.classList.remove("ativo");
+            fundoMenu.classList.remove("ativo");
+        }
+
+        btnMenu.addEventListener("click", abrirMenu);
+        fecharMenu.addEventListener("click", fecharMenuLateral);
+        fundoMenu.addEventListener("click", fecharMenuLateral);
+
+        // Fecha o menu ao clicar em qualquer link (opcional, bom para usabilidade)
+        const linksMenu = document.querySelectorAll(".nav-links a");
+        linksMenu.forEach(function (link) {
+            link.addEventListener("click", fecharMenuLateral);
+        });
+    </script>
+</body>
+</html>
