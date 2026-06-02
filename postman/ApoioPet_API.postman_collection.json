@@ -1,0 +1,459 @@
+{
+  "info": {
+    "_postman_id": "b5c8a72e-9d16-4d5a-a26d-3f2e2d12ab45",
+    "name": "ApoioPet API",
+    "description": "Collection auto-gerada a partir da análise do projeto Spring Boot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Animais",
+      "item": [
+        {
+          "name": "Listar todos os animais",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals"]
+            }
+          }
+        },
+        {
+          "name": "Obter animal por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "1"]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por espécie",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/especie/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "especie", "1"]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por porte",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/porte/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "porte", "1"]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por pelagem",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/pelagem/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "pelagem", "1"]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por sexo",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/sexo/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "sexo", "1"]
+            }
+          }
+        },
+        {
+          "name": "Filtrar por status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/status/true",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "status", "true"]
+            }
+          }
+        },
+        {
+          "name": "Buscar por nome",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals/search?nome=Thor",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals", "search"],
+              "query": [
+                {"key": "nome", "value": "Thor"}
+              ]
+            }
+          }
+        },
+        {
+          "name": "Criar animal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nomeAnimal\": \"Rex\",\n  \"idade\": \"4\",\n  \"status\": true,\n  \"imagem\": \"https://example.com/rex.jpg\",\n  \"especie\": {\"idEspecie\": 1},\n  \"porte\": {\"idPorte\": 2},\n  \"pelagem\": {\"idPelagem\": 3},\n  \"sexo\": {\"idSexo\": 1},\n  \"administrador\": {\"idAdministrador\": 1}\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/animals",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "animals"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Administradores",
+      "item": [
+        {
+          "name": "Listar administradores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/administradores",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "administradores"]
+            }
+          }
+        },
+        {
+          "name": "Obter administrador por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/administradores/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "administradores", "1"]
+            }
+          }
+        },
+        {
+          "name": "Obter administrador por email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/administradores/email/apoiopet.joinville@gmail.com",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "administradores", "email", "apoiopet.joinville@gmail.com"]
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"emailAdm\": \"apoiopet.joinville@gmail.com\",\n  \"senha\": \"apoipet123\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/administradores/login",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "administradores", "login"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Voluntarios",
+      "item": [
+        {
+          "name": "Listar voluntarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/voluntarios",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "voluntarios"]
+            }
+          }
+        },
+        {
+          "name": "Obter voluntario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/voluntarios/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "voluntarios", "1"]
+            }
+          }
+        },
+        {
+          "name": "Criar voluntario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nome\": \"Mariana\",\n  \"idade\": 25,\n  \"emailVoluntario\": {\"idEmailVoluntario\": 1}\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/voluntarios",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "voluntarios"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Mensagens",
+      "item": [
+        {
+          "name": "Listar mensagens",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/mensagens",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "mensagens"]
+            }
+          }
+        },
+        {
+          "name": "Obter mensagem por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/mensagens/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "mensagens", "1"]
+            }
+          }
+        },
+        {
+          "name": "Criar mensagem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"descricao\": \"Cachorro encontrado com fome\",\n  \"status\": true,\n  \"imagemAntes\": \"https://example.com/antes1.jpg\",\n  \"imagemDepois\": \"https://example.com/depois1.jpg\",\n  \"emailMensagem\": {\"idEmailMensagem\": 1}\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/mensagens",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "mensagens"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EmailVoluntarios",
+      "item": [
+        {
+          "name": "Listar emailVoluntarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/emailVoluntarios",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "emailVoluntarios"]
+            }
+          }
+        },
+        {
+          "name": "Obter emailVoluntario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/emailVoluntarios/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "emailVoluntarios", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "EmailMensagens",
+      "item": [
+        {
+          "name": "Listar emailMensagens",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/emails",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "emails"]
+            }
+          }
+        },
+        {
+          "name": "Obter emailMensagem por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/emails/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "emails", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Especies",
+      "item": [
+        {
+          "name": "Listar especies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/especies",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "especies"]
+            }
+          }
+        },
+        {
+          "name": "Obter especie por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/especies/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "especies", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Portes",
+      "item": [
+        {
+          "name": "Listar portes",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/portes",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "portes"]
+            }
+          }
+        },
+        {
+          "name": "Obter porte por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/portes/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "portes", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pelagens",
+      "item": [
+        {
+          "name": "Listar pelagens",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/pelagens",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "pelagens"]
+            }
+          }
+        },
+        {
+          "name": "Obter pelagem por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/pelagens/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "pelagens", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sexos",
+      "item": [
+        {
+          "name": "Listar sexos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sexo",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sexo"]
+            }
+          }
+        },
+        {
+          "name": "Obter sexo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/v1/sexo/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "v1", "sexo", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
