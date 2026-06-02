@@ -22,7 +22,7 @@ public class Mensagem {
     @Column(name = "imagem_depois", nullable = false, length = 255)
     private String imagemDepois;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_email_mensagem_id_email_mensagem", nullable = false)
     private EmailMensagem emailMensagem;
 

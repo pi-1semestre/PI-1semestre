@@ -16,7 +16,7 @@ public class Voluntario {
     @Column(name = "idade", nullable = false)
     private Integer idade;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_email_voluntario_id_email_voluntario", nullable = false)
     private EmailVoluntario emailVoluntario;
 
