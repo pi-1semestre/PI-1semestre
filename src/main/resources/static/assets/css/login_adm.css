@@ -39,13 +39,13 @@ section {
 }
 
 .logo {
-  width: 30%;
+  width: 25%;
 }
 
 p{
     color: white;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 form {
@@ -53,7 +53,7 @@ form {
 
   display: flex;
   flex-direction: column;
-  gap: 45px;
+  gap: 20px;
 }
 
 .campo {
@@ -64,12 +64,12 @@ form {
 
 label {
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 input {
   width: 100%;
-  height: 45px;
+  height: 50px;
 
   border: none;
   outline: none;
@@ -79,7 +79,7 @@ input {
   background: #d8bea9;
   color: #4d3b2f;
 
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .senha-box {
@@ -99,15 +99,15 @@ input {
 
 .btn-login {
   width: 100%;
-  height: 48px;
+  height: 55px;
 
   border: none;
   border-radius: 4px;
 
-  background: #a38e7d;
+  background: #b6977f;
   color: #4d3b2f;
 
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 
   cursor: pointer;
@@ -119,19 +119,43 @@ input {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    main {
+        background-image: none;
+        /* Remove a imagem de fundo para focar no formulário */
+    }
 
-  section {
-    width: 90%;
-    height: 75%;
-  }
+    section {
+        width: 90%;
+        /* Aumenta a largura da seção para aproveitar melhor o espaço */
+        height: auto;
+        /* A altura se ajustará ao conteúdo, o que é melhor para telas menores */
+        padding: 30px 20px;
+        /* Adiciona um espaçamento interno para não colar nas bordas */
+    }
 
-  .logo {
-    width: 60%;
-  }
+    .logo {
+        width: 50%;
+        /* Aumenta o tamanho relativo da logo em telas menores */
+        margin-bottom: 20px;
+        /* Adiciona um espaço abaixo da logo */
+    }
 
-  form {
-    width: 85%;
-  }
+    p {
+        font-size: 1.5rem;
+        /* Diminui um pouco o tamanho da fonte do título */
+    }
 
+    form {
+        width: 100%;
+        /* Faz o formulário ocupar toda a largura da seção */
+        gap: 30px;
+        /* Reduz o espaçamento entre os campos */
+    }
+
+    input{
+      font-size: 1.5rem;
+    }
 }
+
+

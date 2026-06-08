@@ -209,6 +209,7 @@ body {
   display: flex;
   width: 100%;
   overflow: hidden;
+  margin-bottom: 80px;
 }
 
 /* ── Imagem lateral ── */
@@ -277,6 +278,194 @@ body {
 
 .aviso-texto p strong {
   font-weight: 700;
+}
+
+.denuncia {
+    width: 100%;
+    min-height: 320px;
+
+    display: flex;
+    align-items: stretch;
+
+    background: #1d3f80;
+    overflow: hidden;
+}
+
+/* IMAGEM */
+
+.denuncia-img {
+    flex: 1;
+}
+
+.denuncia-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    border: 4px solid #1ea2ff;
+}
+
+/* CONTEÚDO */
+
+.denuncia-conteudo {
+    flex: 1.2;
+
+    position: relative;
+
+    padding: 40px 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #fff;
+}
+
+.denuncia-conteudo h2 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.denuncia-conteudo p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.btn {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 22px;
+
+    font-weight: 700;
+    font-size: 22px;
+
+    border-radius: 4px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.btn-denuncia {
+    background: #d9470a;
+}
+
+.btn-whatsapp {
+    background: #79bf1f;
+}
+
+/* PATAS */
+
+.pata-grande {
+    position: absolute;
+
+    width: 120px;
+
+    right: 40px;
+    top: 50px;
+
+    opacity: 0.2;
+}
+
+.pata-pequena {
+    position: absolute;
+
+    width: 60px;
+
+    right: 25px;
+    bottom: 25px;
+
+    opacity: 0.2;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .denuncia {
+        flex-direction: column;
+    }
+
+    .denuncia-img {
+        height: 350px;
+    }
+
+    .denuncia-conteudo {
+        padding: 40px;
+    }
+
+    .denuncia-conteudo h2 {
+        font-size: 40px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .denuncia-img {
+        height: 250px;
+    }
+
+    .denuncia-conteudo {
+        padding: 30px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .denuncia-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .denuncia-conteudo p {
+        font-size: 16px;
+    }
+
+    .botoes {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .pata-grande {
+        width: 90px;
+        top: 20px;
+        right: 10px;
+    }
+
+    .pata-pequena {
+        width: 45px;
+        right: 10px;
+        bottom: 10px;
+    }
 }
 
 .rodape {
