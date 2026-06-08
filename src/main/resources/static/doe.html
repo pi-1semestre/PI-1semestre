@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doe - Apoio Pet</title>
+    <link rel="stylesheet" href="./assets/css/doe.css">
+</head>
+
+<body>
+
+    <div class="faixa-topo">
+        <div class="faixa-amarela"></div>
+        <div class="faixa-verde"></div>
+        <div class="faixa-vermelha"></div>
+    </div>
+
+    <header class="cabecalho">
+        <img src="./assets/imgs/doe_img/logo.png" alt="Apoio Pet" class="logo">
+
+        <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
+
+        <div class="fundo-menu" id="fundoMenu"></div>
+
+        <nav class="menu" id="menu">
+            <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
+
+            <a href="#">Início</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Casos</a>
+            <a href="#">Denúncia</a>
+            <a href="#">Contato</a>
+            <a href="#" class="btn-ajuda">Como ajudar</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+
+            <a href="#" class="card-hover">
+                <img src="./assets/imgs/doe_img/banner_doação.png" alt="Cachorros">
+                <div class="card-doe-hover">
+                    <h1>Doe</h1>
+                    <p>Ajude com o valor que conseguir!</p>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover">
+                <img src="./assets/imgs/doe_img/Cuidado_Gato.png" alt="Gato">
+                <div class="card-doe-hover">
+                    <h1>Doe</h1>
+                    <p>Ajude com o valor que conseguir!</p>
+                </div>
+            </a>
+
+            <a href="#" class="card-hover">
+                <img src="./assets/imgs/doe_img/Cachorros_Card.jpg" alt="Cachorros">
+                <div class="card-doe-hover">
+                    <h1>Doe</h1>
+                    <p>Ajude com o valor que conseguir!</p>
+                </div>
+            </a>
+
+        </section>
+
+        <div class="linha-separadora"></div>
+
+        <section class="pontos">
+            <h2>Pontos de apoio</h2>
+
+            <div class="pontos-info">
+                <img src="./assets/imgs/doe_img/SENAI_Joinville.png" alt="SENAI Joinville">
+
+                <p>
+                    R. Arno Waldemar Döhler, 957 - Zona Industrial Norte,
+                    Joinville - SC, 89219-510
+                </p>
+
+                <span></span>
+
+                <p>Telefone: (47) 3441-7700</p>
+            </div>
+        </section>
+
+        <section class="banner-doacao">
+            <div class="banner-overlay">
+                <h2>Ajude doando!</h2>
+
+                <p>
+                    Faça parte dessa causa doando o quanto for possível!<br>
+                    Para você pode ser pouco, mas faz diferença.
+                </p>
+
+                <div class="botoes-doacao">
+                    <button type="button" onclick="abrirQr('./assets/imgs/doe_img/gato_pensativo.png')">
+                        Doe qualquer<br>valor
+                    </button>
+
+                    <button type="button" onclick="abrirQr('./assets/imgs/doe_img/gato_pensativo.png')">
+                        Doe<br>R$1,00
+                    </button>
+
+                    <button type="button" onclick="abrirQr('./assets/imgs/doe_img/gato_pensativo.png')">
+                        Doe<br>R$10,00
+                    </button>
+
+                    <button type="button" onclick="abrirQr('./assets/imgs/doe_img/gato_pensativo.png')">
+                        Doe<br>R$50,00
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal-qr" id="modalQr">
+            <div class="caixa-qr">
+                <button type="button" class="fechar-qr" onclick="fecharQr()">×</button>
+
+                <h3>Escaneie o QR Code</h3>
+
+                <img src="" alt="QR Code de doação" id="imagemQr">
+            </div>
+        </div>
+
+        <div class="linha-separadora"></div>
+
+        <section class="adocao">
+            <div class="dog-box">
+                <img src="./assets/imgs/doe_img/Cachorro_Marrom.png" alt="Cachorro marrom">
+            </div>
+
+            <div class="adocao-texto">
+                <img src="./assets/imgs/doe_img/Patinha_Colorida.png" alt="Patinha colorida" class="pata">
+
+                <h2>Adoção Responsável</h2>
+
+                <p>
+                    Adotar é um ato de amor e compromisso. Antes de levar um pet para casa,
+                    é importante garantir que você tenha tempo, condições e responsabilidade
+                    para cuidar dele por toda a vida. Nossos animais são entregues vacinados,
+                    avaliados e prontos para receber carinho. Ao adotar com consciência,
+                    você transforma uma vida e ganha um amigo para sempre.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <div class="rodape-grid">
+
+            <div class="rodape-coluna">
+                <h3>Onde estamos</h3>
+
+                <div class="mapa">
+                    <iframe 
+                        src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="rodape-coluna">
+                <h3>Fale conosco</h3>
+
+                <a href="tel:08000481212" class="rodape-botao">
+                    <img src="./assets/imgs/doe_img/Telefone.png" alt="Telefone">
+                    0800-048-1212
+                </a>
+
+                <a href="https://wa.me/554832314000" class="rodape-botao">
+                    <img src="./assets/imgs/doe_img/whatsapp.png" alt="WhatsApp">
+                    (48) 3231-4000
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510" class="rodape-botao" target="_blank">
+                    <img src="./assets/imgs/doe_img/Localização.png" alt="Localização">
+                    R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
+                </a>
+
+                <a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
+                    <img src="./assets/imgs/doe_img/Email.png" alt="Email">
+                    faleconosco@fiesc.com.br
+                </a>
+            </div>
+
+            <div class="rodape-coluna ajuda">
+                <h3>Como ajudar</h3>
+
+                <a href="#" class="rodape-botao">
+                    <img src="./assets/imgs/doe_img/Pix.png" alt="Pix">
+                    Pix
+                </a>
+
+                <a href="#" class="rodape-botao">
+                    <img src="./assets/imgs/doe_img/Pessoa.png" alt="Pessoa">
+                    Seja voluntario
+                </a>
+
+                <div class="redes">
+                    <h3>Siga-nos</h3>
+
+                    <a href="#" aria-label="Instagram">
+                        <img src="./assets/imgs/doe_img/Instagram.png" alt="Instagram">
+                    </a>
+
+                    <a href="#" aria-label="Facebook">
+                        <img src="./assets/imgs/doe_img/Facebook.png" alt="Facebook">
+                    </a>
+
+                    <a href="#" aria-label="Linkedin">
+                        <img src="./assets/imgs/doe_img/Linkedin.png" alt="Linkedin">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="linha-rodape"></div>
+
+        <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const fecharMenu = document.getElementById("fecharMenu");
+        const menu = document.getElementById("menu");
+        const fundoMenu = document.getElementById("fundoMenu");
+
+        function abrirMenu() {
+            menu.classList.add("ativo");
+            fundoMenu.classList.add("ativo");
+        }
+
+        function fecharMenuLateral() {
+            menu.classList.remove("ativo");
+            fundoMenu.classList.remove("ativo");
+        }
+
+        btnMenu.addEventListener("click", abrirMenu);
+        fecharMenu.addEventListener("click", fecharMenuLateral);
+        fundoMenu.addEventListener("click", fecharMenuLateral);
+
+        const linksMenu = document.querySelectorAll(".menu a");
+
+        linksMenu.forEach(function (link) {
+            link.addEventListener("click", fecharMenuLateral);
+        });
+
+        function abrirQr(caminhoImagem) {
+            const modal = document.getElementById("modalQr");
+            const imagem = document.getElementById("imagemQr");
+
+            imagem.src = caminhoImagem;
+            modal.classList.add("ativo");
+        }
+
+        function fecharQr() {
+            const modal = document.getElementById("modalQr");
+            const imagem = document.getElementById("imagemQr");
+
+            modal.classList.remove("ativo");
+            imagem.src = "";
+        }
+
+        document.getElementById("modalQr").addEventListener("click", function(event) {
+            if (event.target.id === "modalQr") {
+                fecharQr();
+            }
+        });
+    </script>
+
+</body>
+</html>
