@@ -1,6 +1,7 @@
 package com.pi.demo.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -47,7 +48,7 @@ public class Administrador {
         this.emailAdm = emailAdm;
     }
 
-    @JsonIgnore
+    @JsonProperty 
     public String getSenha() {
         return senha;
     }
