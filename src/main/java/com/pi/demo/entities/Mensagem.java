@@ -22,19 +22,22 @@ public class Mensagem {
     @Column(name = "imagem_depois", nullable = false, length = 255)
     private String imagemDepois;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "tb_email_mensagem_id_email_mensagem", nullable = false)
-    private EmailMensagem emailMensagem;
+    @Column(name = "nome_animal", nullable = false, length = 255)
+    private String nomeAnimal;
+
+    @Column(name = "idade_animal", nullable = false)
+    private int idadeAnimal;
 
     public Mensagem() {}
 
-    public Mensagem(Long idMensagem, String descricao, EmailMensagem emailMensagem, String imagemAntes, String imagemDepois, boolean status) {
+    public Mensagem(Long idMensagem, String descricao, String imagemAntes, String imagemDepois, boolean status, String nomeAnimal, int idadeAnimal) {
         this.idMensagem = idMensagem;
         this.descricao = descricao;
-        this.emailMensagem = emailMensagem;
         this.imagemAntes = imagemAntes;
         this.imagemDepois = imagemDepois;
         this.status = status;
+        this.nomeAnimal = nomeAnimal;
+        this.idadeAnimal = idadeAnimal;
     }
 
     public Long getIdMensagem() {
@@ -51,14 +54,6 @@ public class Mensagem {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public EmailMensagem getEmailMensagem() {
-        return emailMensagem;
-    }
-
-    public void setEmailMensagem(EmailMensagem emailMensagem) {
-        this.emailMensagem = emailMensagem;
     }
 
     public String getImagemAntes() {
@@ -84,4 +79,21 @@ public class Mensagem {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
+    public String getNomeAnimal() {
+        return nomeAnimal;
+    }
+
+    public void setNomeAnimal(String nomeAnimal) {
+        this.nomeAnimal = nomeAnimal;
+    }
+
+    public int getIdadeAnimal() {
+        return idadeAnimal;
+    }
+
+    public void setIdadeAnimal(int idadeAnimal) {
+        this.idadeAnimal = idadeAnimal;
+    }
+
 }

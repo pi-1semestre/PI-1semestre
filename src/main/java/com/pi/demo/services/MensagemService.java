@@ -31,4 +31,20 @@ public class MensagemService {
     public Mensagem save(Mensagem mensagem) {
         return mensagemRepository.save(mensagem);
     }
+
+    public List<Mensagem> findByNomeContaining(String nome) {
+        return mensagemRepository.findByNomeAnimalContaining(nome);
+    }
+
+    public List<Mensagem> findByStatus(boolean status) {
+        if (status) {
+            return mensagemRepository.findByStatusTrue();
+        } else {
+            return mensagemRepository.findByStatusFalse();
+        }
+    }
+
+    public List<Mensagem> findByNomeAnimal(String nomeAnimal) {
+        return mensagemRepository.findByNomeAnimal(nomeAnimal);
+    }
 }
