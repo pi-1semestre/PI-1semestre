@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api/v1/mensagens")
@@ -32,7 +31,7 @@ public class MensagemController {
 
     @GetMapping("/status/{status}")
     public ResponseEntity<List<Mensagem>> getMensagensByStatus(@PathVariable boolean status) {
-        return ResponseEntity.ok(mensagemService.findByStatusTrue());
+        return ResponseEntity.ok(mensagemService.findByStatus(status));
     }
     
 
@@ -57,5 +56,15 @@ public class MensagemController {
         }
         mensagemService.deleteById(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Mensagem>> searchAnimalsByNome(@RequestParam String nome) {
+        return ResponseEntity.ok(mensagemService.findByNomeContaining(nome));
+    }
+
+    @GetMapping("/animal/{nomeAnimal}")
+    public ResponseEntity<List<Mensagem>> searchByNomeAnimal(@PathVariable String nomeAnimal) {
+        return ResponseEntity.ok(mensagemService.findByNomeAnimal(nomeAnimal));
     }
 }
