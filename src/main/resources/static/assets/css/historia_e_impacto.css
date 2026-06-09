@@ -321,6 +321,20 @@ main{
     padding:50px 28px 40px;
 }
 
+.upload-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.upload-titulo{
+    color:#0c3474;
+    font-size:16px;
+    font-weight:800;
+    line-height:1;
+}
+
 .formulario-historia label:not(.upload-box){
     display:block;
     color:#0c3474;
@@ -748,6 +762,20 @@ main{
         padding:18px 14px 20px;
         border-radius:8px;
     }
+
+.upload-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.upload-titulo{
+    color:#0c3474;
+    font-size:16px;
+    font-weight:800;
+    line-height:1;
+}
 
     .formulario-historia label:not(.upload-box){
         font-size:13px;
