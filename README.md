@@ -1,10 +1,10 @@
 # 🐾 Projeto Integrador: Apoio Pet
 
----
+___
 
 > **Bem-vindo à documentação oficial do nosso Projeto Integrador.** > Este projeto tem como objetivo desenvolver uma plataforma web funcional e intuitiva para conectar animais resgatados a novos lares, facilitando o trabalho da ONG Apoio Pet.
 
----
+___
 
 ## 📌 Visão Geral
 O site busca resolver a dificuldade de centralização de informações sobre animais disponíveis para adoção, oferecendo uma interface amigável tanto para os adotantes quanto para os administradores da ONG.
@@ -29,7 +29,7 @@ O site busca resolver a dificuldade de centralização de informações sobre an
 | **Banco de Dados** | MySQL |
 | **Design** | Figma e Google Stitch (prototipagem) |
 
----
+___
 
 # 📋 Requisitos — Apoio Pet
 
@@ -168,7 +168,7 @@ O site busca resolver a dificuldade de centralização de informações sobre an
 | 11.1.4 | **Organização:** O layout deve ser estruturado. |
 | 11.1.5 | **Usabilidade:** Deve facilitar o gerenciamento dos dados. |
 
----
+___
 
 # 🏗️ Arquitetura do Banco de Dados
 
@@ -204,7 +204,7 @@ A implementação técnica (esquema SQL):
 
 ![Modelo Físico](https://github.com/user-attachments/assets/3e9d9a04-ddf7-4625-a405-aea9625778bb)
 
----
+___
 
 ## 3. Dicionário de Tabelas Principais
 
@@ -220,7 +220,7 @@ A implementação técnica (esquema SQL):
 2.  **Escalabilidade:** Permite adicionar novos registros (espécies/pelagens) sem alterar a estrutura principal.
 3.  **Segurança:** Separação clara de perfis (administradores vs. voluntários).
 
----
+___
 
 ## 👥 Equipe de Desenvolvimento
 * **Gustavo Leme:** [GitHub](https://github.com/Gusleme)
@@ -229,5 +229,5 @@ A implementação técnica (esquema SQL):
 * **Jeniffer Oliveira:** [GitHub](https://github.com/jenifferCamar)
 * **Juliana Karla:** [GitHub](https://github.com/maxiecuti)
 
----
+___
 > 🐾 *Este projeto faz parte da disciplina de Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas.*
