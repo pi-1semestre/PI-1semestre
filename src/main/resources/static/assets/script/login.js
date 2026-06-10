@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
+    const email = document.getElementById('emailAdm').value.trim();
+    const senha = document.getElementById('senha').value.trim();
 
     fetch('http://127.0.0.1:8080/api/v1/administradores/login', {
       method: 'POST',

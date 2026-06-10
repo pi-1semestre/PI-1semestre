@@ -55,6 +55,6 @@ INSERT INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_voluntario
 ('Ana Paula Santos', 34, 2);
 
 -- Mensagens / Relatos de resgate
-INSERT INTO tb_mensagem (descricao, status, imagem_antes, imagem_depois) VALUES
-('Encontrei este cachorro machucado na rua das Palmeiras.', true, 'https://example.com/antes1.jpg', 'https://example.com/depois1.jpg'),
-('Gatinha com filhotes abandonada no terreno baldio.', true, 'https://example.com/antes2.jpg', 'https://example.com/depois2.jpg');
+INSERT INTO tb_mensagem (descricao, status, imagem_antes, imagem_depois, nome_animal, idade_animal) VALUES
+('Encontrei este cachorro machucado na rua das Palmeiras.', true, 'https://example.com/antes1.jpg', 'https://example.com/depois1.jpg', 'Rex', 3),
+('Gatinha com filhotes abandonada no terreno baldio.', true, 'https://example.com/antes2.jpg', 'https://example.com/depois2.jpg', 'Mimi', 2);
