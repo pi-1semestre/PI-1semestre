@@ -1,0 +1,26 @@
+@startuml caso_de_uso_apoio_pet
+left to right direction
+
+actor Usuario
+actor Admin
+
+Usuario <|-- Admin
+
+rectangle "Sistema de adoção" {
+  Usuario --- (Visualizar animais)
+  Usuario --- (Enviar historias de animais resgatados para a ONG)
+  Usuario --- (Adotar animais)
+  Usuario --- (Doar para a ONG)
+  Usuario --- (Se voluntariar para ajudar a ONG)
+  Usuario --- (Visualizar as informações da ong)
+  Usuario --- (Realizar denúncias)
+  Usuario --- (Comunicar-se diretamente com a ONG)
+
+  Admin --- (Gerenciar informações da ONG)
+  Admin --- (Gerenciar informações dos animais)
+  Admin --- (Gerenciar relatos enviados)
+  Admin --- (Gerenciar feedbacks enviados)
+  Admin --- (Gerenciar denúnicas)
+}
+
+@enduml
