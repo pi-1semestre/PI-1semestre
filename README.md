@@ -1,10 +1,6 @@
 # 🐾 Projeto Integrador: Apoio Pet
 
-___
-
 > **Bem-vindo à documentação oficial do nosso Projeto Integrador.** > Este projeto tem como objetivo desenvolver uma plataforma web funcional e intuitiva para conectar animais resgatados a novos lares, facilitando o trabalho da ONG Apoio Pet.
-
-___
 
 ## 📌 Visão Geral
 O site busca resolver a dificuldade de centralização de informações sobre animais disponíveis para adoção, oferecendo uma interface amigável tanto para os adotantes quanto para os administradores da ONG.
@@ -24,12 +20,11 @@ O site busca resolver a dificuldade de centralização de informações sobre an
 ## 🛠️ Tecnologias Utilizadas
 | Categoria | Tecnologia |
 | :--- | :--- |
-| **Frontend** | HTML5, CSS |
+| **Frontend** | HTML5, CSS, JavaScript |
 | **Backend** | Java Spring Boot |
 | **Banco de Dados** | MySQL |
 | **Design** | Figma e Google Stitch (prototipagem) |
 
-___
 
 # 📋 Requisitos — Apoio Pet
 
@@ -168,18 +163,16 @@ ___
 | 11.1.4 | **Organização:** O layout deve ser estruturado. |
 | 11.1.5 | **Usabilidade:** Deve facilitar o gerenciamento dos dados. |
 
-___
-
 # 🏗️ Arquitetura do Banco de Dados
 
 ## 1. Visão Geral
-O sistema foi projetado para gerenciar o cadastro de animais, vinculando-os a características específicas (espécie, pelagem, porte, sexo) e aos responsáveis (administradores). Além disso, o sistema prevê o gerenciamento de voluntários da ONG e mensagens de contato/feedback.
+O sistema foi projetado para gerenciar o cadastro de animais, vinculando-os a características específicas (espécie, pelagem, porte, sexo) e aos responsáveis (administradores). Além disso, o sistema prevê o gerenciamento de voluntários da ONG e envio de relatos para a ONG.
 
 ## 2. Modelos de Dados
 
 ### 2.1 Modelo Conceitual
 O modelo de alto nível identifica as entidades principais e seus relacionamentos:
-* **Entidades Fortes:** Animais, Administradores, Voluntários, Mensagem.
+* **Entidades Fortes:** Animais, Administradores, Voluntários.
 * **Entidades de Domínio (Atributos):** Pelagem, Espécies, Porte, Sexo (utilizadas para normalização).
 * **Relacionamentos:**
     * Um Animal **pertence** a uma Espécie, Pelagem, Porte e Sexo (1:N).
@@ -212,15 +205,12 @@ ___
 | :--- | :--- |
 | **tb_animal** | Centraliza dados dos pets (nome, idade, disponibilidade, FKs). |
 | **tb_administrador** | Usuários com permissões de gestão (id, email, senha). |
-| **tb_mensagens** | Logs e rastreabilidade de contatos externos. |
 | **tb_voluntarios** | Cadastro de colaboradores vinculado a e-mails. |
 
 ## 4. Análise da Arquitetura
 1.  **Normalização:** Arquitetura na 3ª Forma Normal (3FN), otimizando a manutenção.
 2.  **Escalabilidade:** Permite adicionar novos registros (espécies/pelagens) sem alterar a estrutura principal.
 3.  **Segurança:** Separação clara de perfis (administradores vs. voluntários).
-
-___
 
 ## 👥 Equipe de Desenvolvimento
 * **Gustavo Leme:** [GitHub](https://github.com/Gusleme)
@@ -230,4 +220,4 @@ ___
 * **Juliana Karla:** [GitHub](https://github.com/maxiecuti)
 
 ___
-> 🐾 *Este projeto faz parte da disciplina de Projeto Integrador do curso de Análise e Desenvolvimento de Sistemas.*
+> 🐾 *Este projeto faz parte da disciplina de Projeto Integrador do primeiro semestre do curso de Análise e Desenvolvimento de Sistemas.*
