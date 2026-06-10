@@ -37,11 +37,6 @@ INSERT INTO tb_especie (especie) VALUES ('Cachorro'), ('Gato');
 INSERT INTO tb_porte (porte) VALUES
 ('Mini'), ('Pequeno'), ('Médio'), ('Grande'), ('Gigante');
 
--- Emails de Mensagens (para relatos de resgate)
-INSERT INTO tb_email_mensagem (email) VALUES
-('joao.silva@email.com'),
-('maria.oliveira@email.com');
-
 -- Emails de Voluntários
 INSERT INTO tb_email_voluntario (email) VALUES
 ('carlos.voluntario@email.com'),
@@ -54,12 +49,12 @@ INSERT INTO tb_animal (nome_animal, idade, status, imagem, tb_especie_id_especie
 ('Thor', '5', true, 'https://example.com/thor.jpg', 1, 4, 7, 1, 1),
 ('Luna', '1', false, 'https://example.com/luna.jpg', 2, 2, 5, 2, 1);
 
--- Mensagens / Relatos de resgate
-INSERT INTO tb_mensagem (descricao, status, imagem_antes, imagem_depois, tb_email_mensagem_id_email_mensagem) VALUES
-('Encontrei este cachorro machucado na rua das Palmeiras.', true, 'https://example.com/antes1.jpg', 'https://example.com/depois1.jpg', 1),
-('Gatinha com filhotes abandonada no terreno baldio.', true, 'https://example.com/antes2.jpg', 'https://example.com/depois2.jpg', 2);
-
 -- Voluntários
 INSERT INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_voluntario) VALUES
 ('Carlos Mendes', 28, 1),
 ('Ana Paula Santos', 34, 2);
+
+-- Mensagens / Relatos de resgate
+INSERT INTO tb_mensagem (descricao, status, imagem_antes, imagem_depois) VALUES
+('Encontrei este cachorro machucado na rua das Palmeiras.', true, 'https://example.com/antes1.jpg', 'https://example.com/depois1.jpg'),
+('Gatinha com filhotes abandonada no terreno baldio.', true, 'https://example.com/antes2.jpg', 'https://example.com/depois2.jpg');
