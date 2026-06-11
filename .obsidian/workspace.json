@@ -185,6 +185,9 @@
   },
   "active": "1cd38595fb81b1e5",
   "lastOpenFiles": [
+    "src/main/resources/static/assets/script/novas_historias.js",
+    "src/main/resources/static/assets/script/cadastro_animal.js",
+    "src/main/resources/static/assets/script/animais_cadastrados.js",
     "docs/_readme.md",
     "docs/fluxograma.md",
     "README.md"
