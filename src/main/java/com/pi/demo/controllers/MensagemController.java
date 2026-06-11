@@ -20,7 +20,7 @@ import com.pi.demo.services.MensagemService;
 
 @RestController
 @RequestMapping("/api/v1/mensagens")
-@CrossOrigin(origins = {"http://127.0.0.1:5502", "http://localhost:5502"})
+@CrossOrigin(origins = "*")
 public class MensagemController {
 
     @Autowired
