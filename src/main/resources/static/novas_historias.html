@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoio Pet - Novas Histórias</title>
+    <title>Apoio Pet - Nova História</title>
     <link rel="stylesheet" href="./assets/css/novas_historias.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,163 +15,72 @@
         </div>
 
         <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
+        
         <div class="fundo-menu" id="fundoMenu"></div>
 
         <nav class="nav-links" id="menu">
             <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
             <a href="novas_historias.html" class="active">Novas Histórias</a>
-            <a href="cadastro_pet.html">Cadastrar</a>
+            <a href="cadastro_animal.html">Cadastrar</a>
             <a href="animais_cadastrados.html">Animais Cadastrados</a>
-            <a href="#" class="btn-sair">Sair</a>
+            <a href="login_adm.html">Login</a>
         </nav>
     </header>
 
     <main class="main-container">
         
         <div class="topo-pagina">
-            <div class="titulo-container">
+            <div class="titulo-esquerda">
                 <a href="javascript:history.back()" class="btn-voltar-circulo" aria-label="Voltar">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18L15.41 16.59Z" fill="white" stroke="white" stroke-width="2"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
                     </svg>
                 </a>
-                <h1>Novas Histórias</h1>
+                <h1>Nova História</h1>
             </div>
             
-            <div class="filtro-container">
-                <label for="filtroStatus">Mostrar:</label>
-                <select id="filtroStatus">
-                    <option value="pendentes">Apenas Pendentes</option>
-                    <option value="todas">Todas as Histórias</option>
-                </select>
+            <div class="toggle-container">
+                <span>Todas</span>
+                <label class="switch">
+                    <input type="checkbox" id="toggleTodas">
+                    <span class="slider round"></span>
+                </label>
             </div>
         </div>
 
-        <div class="historias-grid" id="grid-historias">
-            <p style="text-align: center; width: 100%;">Carregando histórias do banco de dados...</p>
-        </div>
+        <div class="historias-grid" id="grid-historias"></div>
     </main>
 
+    <script src="./assets/script/animais_cadastrados.js"></script>
+
     <script>
-        // --- 1. Controle do Menu Mobile ---
-        const btnMenu = document.getElementById("btnMenu");
-        const fecharMenu = document.getElementById("fecharMenu");
-        const menu = document.getElementById("menu");
-        const fundoMenu = document.getElementById("fundoMenu");
+        document.addEventListener("DOMContentLoaded", function() {
+            const btnMenu = document.getElementById("btnMenu");
+            const fecharMenu = document.getElementById("fecharMenu");
+            const menu = document.getElementById("menu");
+            const fundoMenu = document.getElementById("fundoMenu");
 
-        btnMenu.addEventListener("click", () => { menu.classList.add("ativo"); fundoMenu.classList.add("ativo"); });
-        fecharMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
-        fundoMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
-
-        // --- 2. Lógica de Banco de Dados ---
-        const API_URL = "http://localhost:8080/api/mensagens"; // Porta do seu Java
-        const gridHistorias = document.getElementById("grid-historias");
-        const filtroStatus = document.getElementById("filtroStatus");
-        let todasAsHistorias = []; 
-
-        // Busca os dados da tabela tb_mensagem
-        async function carregarHistorias() {
-            try {
-                const response = await fetch(API_URL);
-                if (!response.ok) throw new Error("Falha ao buscar");
-                
-                todasAsHistorias = await response.json();
-                aplicarFiltro(); // Chama a função que renderiza com base no filtro selecionado
-            } catch (error) {
-                console.error("Erro de conexão:", error);
-                gridHistorias.innerHTML = `<p style="text-align: center; color: red;">Erro ao conectar com o servidor. O Java está rodando?</p>`;
-            }
-        }
-
-        // Renderiza os cards na tela
-        function renderizarCards(lista) {
-            gridHistorias.innerHTML = ""; 
-
-            if (lista.length === 0) {
-                gridHistorias.innerHTML = `<p style="text-align: center; width: 100%;">Nenhuma história encontrada nesta categoria.</p>`;
-                return;
+            // Abre o menu
+            if (btnMenu) {
+                btnMenu.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    menu.classList.add("ativo");
+                    fundoMenu.classList.add("ativo");
+                });
             }
 
-            lista.forEach(item => {
-                const card = document.createElement("div");
-                card.className = "story-card";
-                
-                // Trata o status (Pode vir como 1/0 ou true/false do Java)
-                const isPublicado = (item.status === 1 || item.status === true);
-                
-                // Botão muda se já estiver publicado
-                const botaoPublicarHTML = isPublicado 
-                    ? `<button class="btn-action btn-publicar disabled" disabled>✔ Publicado</button>`
-                    : `<button class="btn-action btn-publicar" onclick="publicarHistoria(${item.id})">Publicar</button>`;
-
-                card.innerHTML = `
-                    <div class="card-images">
-                        <div class="img-wrapper">
-                            <img src="${item.imagem_antes}" alt="Antes">
-                            <span class="badge badge-antes">Antes</span>
-                        </div>
-                        <div class="img-wrapper">
-                            <img src="${item.imagem_depois}" alt="Depois">
-                            <span class="badge badge-depois">Depois</span>
-                        </div>
-                    </div>
-                    
-                    <div class="card-content">
-                        <p class="card-text">"${item.descricao}"</p> 
-                    </div>
-
-                    <div class="card-actions">
-                        ${botaoPublicarHTML}
-                        <button class="btn-action btn-deletar" onclick="deletarHistoria(${item.id})">Deletar</button>
-                    </div>
-                `;
-                gridHistorias.appendChild(card);
-            });
-        }
-
-        // --- 3. Filtro e Ações ---
-        function aplicarFiltro() {
-            const valorFiltro = filtroStatus.value;
-            if (valorFiltro === "pendentes") {
-                const pendentes = todasAsHistorias.filter(h => h.status === 0 || h.status === false || h.status === null);
-                renderizarCards(pendentes);
-            } else {
-                renderizarCards(todasAsHistorias);
+            // Fecha o menu
+            function fecharPainel(e) {
+                e.preventDefault();
+                menu.classList.remove("ativo");
+                fundoMenu.classList.remove("ativo");
             }
-        }
 
-        filtroStatus.addEventListener("change", aplicarFiltro);
-
-        async function publicarHistoria(id) {
-            try {
-                const response = await fetch(`${API_URL}/${id}/publicar`, { method: 'PUT' });
-                if (response.ok) {
-                    alert("História aprovada e publicada com sucesso!");
-                    carregarHistorias(); 
-                } else {
-                    alert("Erro ao publicar a história.");
-                }
-            } catch (error) {
-                console.error("Erro ao publicar:", error);
+            if (fecharMenu && fundoMenu) {
+                fecharMenu.addEventListener("click", fecharPainel);
+                fundoMenu.addEventListener("click", fecharPainel);
             }
-        }
-
-        async function deletarHistoria(id) {
-            if (!confirm("Tem certeza que deseja apagar essa mensagem permanentemente?")) return;
-            try {
-                const response = await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
-                if (response.ok) {
-                    carregarHistorias();
-                } else {
-                    alert("Erro ao deletar do banco de dados.");
-                }
-            } catch (error) {
-                console.error("Erro ao deletar:", error);
-            }
-        }
-
-        // Inicia tudo ao abrir a página
-        window.addEventListener("DOMContentLoaded", carregarHistorias);
+        });
     </script>
 </body>
 </html>
