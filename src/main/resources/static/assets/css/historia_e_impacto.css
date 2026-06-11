@@ -808,65 +808,61 @@ main {
 
     /* FOOTER MOBILE */
 
-    .rodape {
-        padding: 12px 14px 8px;
-        background: #634c35;
-        color: white;
-    }
+/* ── FOOTER MOBILE IGUAL AO INDEX ── */
 
-    .rodape-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 12px;
-        align-items: start;
-    }
+.rodape {
+    padding: 32px 18px 14px;
+}
 
-    .rodape h3 {
-        font-size: 8px;
-        margin-bottom: 5px;
-    }
+.rodape-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
 
-    .mapa {
-        display: block;
-        width: 100%;
-        height: 80px;
-        overflow: hidden;
-    }
+.rodape h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
 
-    .mapa iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        display: block;
-    }
+.mapa {
+    width: 100%;
+    max-width: 100%;
+    height: 160px;
+}
 
-    .rodape-botao {
-        font-size: 5px;
-        gap: 3px;
-        margin-bottom: 4px;
-        color: white;
-    }
+.rodape-botao {
+    font-size: 12px;
+    gap: 8px;
+    margin-bottom: 10px;
+}
 
-    .rodape-botao img {
-        width: 7px;
-        height: 7px;
-    }
+.rodape-botao img {
+    width: 16px;
+    height: 16px;
+}
 
-    .redes {
-        display: none;
-    }
+.redes {
+    margin-top: 8px;
+    text-align: left;
+    display: block;
+}
 
-    .linha-rodape {
-        margin-top: 8px;
-        background: #9a8b77;
-    }
+.redes h3 {
+    font-size: 16px;
+}
 
-    .copy {
-        width: 100%;
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        font-size: 5px;
-        margin-top: 5px;
-        margin-bottom: 0;
-    }
+.redes img {
+    width: 22px;
+    height: 22px;
+    margin: 0 8px 0 0;
+}
+
+.linha-rodape {
+    margin-top: 24px;
+}
+
+.copy {
+    font-size: 8px;
+    margin-top: 10px;
+}
 }
