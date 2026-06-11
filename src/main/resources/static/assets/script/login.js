@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('emailAdm').value.trim();
     const senha = document.getElementById('senha').value.trim();
 
-    fetch('http://127.0.0.1:8080/api/v1/administradores/login', {
+    fetch('http://127.0.0.1:8081/api/v1/administradores/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ emailAdm: email, senha: senha })
