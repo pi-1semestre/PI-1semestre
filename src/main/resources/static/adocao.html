@@ -14,7 +14,10 @@
 <body>
 
     <div class="top-bar-decorator"></div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
     <div class="faixa-topo">
         <div class="faixa-amarela"></div>
         <div class="faixa-verde"></div>
@@ -23,14 +26,10 @@
 
     <header class="cabecalho">
         <img src="./assets/imgs/Logo.png" alt="Apoio Pet" class="logo">
-
         <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
-
         <div class="fundo-menu" id="fundoMenu"></div>
-
         <nav class="menu" id="menu">
             <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
-
             <a href="index.html">Início</a>
             <a href="sobre_nos.html">Sobre Nós</a>
             <a href="casos.html">Casos</a>
@@ -53,7 +52,25 @@
                     <span class="checkmark"></span> Cachorro
                 </label>
             </div>
-            <button class="btn-search">Procure um amiguinho</button>
+            
+            <select id="filtro-porte" class="input-filtro">
+                <option value="">Porte (Todos)</option>
+                <option value="Pequeno">Pequeno</option>
+                <option value="Medio">Médio</option>
+                <option value="Grande">Grande</option>
+            </select>
+            <select id="filtro-pelagem" class="input-filtro">
+                <option value="">Pelagem (Todas)</option>
+                <option value="Curta">Curta</option>
+                <option value="Longa">Longa</option>
+            </select>
+            <select id="filtro-sexo" class="input-filtro">
+                <option value="">Sexo (Todos)</option>
+                <option value="Macho">Macho</option>
+                <option value="Femea">Fêmea</option>
+            </select>
+
+            <button class="btn-search" id="btnFiltrar">Procure um amiguinho</button>
         </div>
     </section>
 
@@ -64,11 +81,14 @@
     </main>
 
     <footer class="rodape">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
         <div class="rodape-grid">
-
             <div class="rodape-coluna">
                 <h3>Onde estamos</h3>
+<<<<<<< HEAD
 
                 <div class="mapa">
                     <iframe
@@ -76,10 +96,13 @@
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
+=======
+                <div class="mapa"><iframe src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed" loading="lazy"></iframe></div>
+>>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
-
             <div class="rodape-coluna">
                 <h3>Fale conosco</h3>
+<<<<<<< HEAD
 
                 <a href="tel:08000481212" class="rodape-botao">
                     <img src="./assets/imgs/adocao_imagem/Telefone.png" alt="Telefone">
@@ -101,10 +124,14 @@
                     <img src="./assets/imgs/adocao_imagem/Email.png" alt="Email">
                     faleconosco@fiesc.com.br
                 </a>
+=======
+                <a href="tel:08000481212" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Telefone.png" alt="Telefone"> 0800-048-1212</a>
+                <a href="https://wa.me/554832314000" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/WhatsApp.png" alt="WhatsApp"> (48) 3231-4000</a>
+>>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
-
             <div class="rodape-coluna ajuda">
                 <h3>Como ajudar</h3>
+<<<<<<< HEAD
 
                 <a href="./doe.html" class="rodape-botao">
                     <img src="./assets/imgs/adocao_imagem/Pix.png" alt="Pix">
@@ -131,43 +158,25 @@
                         <img src="./assets/imgs/adocao_imagem/Linkedin.png" alt="Linkedin">
                     </a>
                 </div>
+=======
+                <a href="#" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Pix.png" alt="Pix"> Pix</a>
+                <a href="./formulario.html" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Pessoa.png" alt="Pessoa"> Seja voluntário</a>
+>>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
-
         </div>
-
-        <div class="linha-rodape"></div>
-
         <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
-
     </footer>
 
     <script>
+        // Menu lógico (Inalterado)
         const btnMenu = document.getElementById("btnMenu");
         const fecharMenu = document.getElementById("fecharMenu");
         const menu = document.getElementById("menu");
         const fundoMenu = document.getElementById("fundoMenu");
-
-        function abrirMenu() {
-            menu.classList.add("ativo");
-            fundoMenu.classList.add("ativo");
-        }
-
-        function fecharMenuLateral() {
-            menu.classList.remove("ativo");
-            fundoMenu.classList.remove("ativo");
-        }
-
-        btnMenu.addEventListener("click", abrirMenu);
-        fecharMenu.addEventListener("click", fecharMenuLateral);
-        fundoMenu.addEventListener("click", fecharMenuLateral);
-
-        const linksMenu = document.querySelectorAll(".menu a");
-
-        linksMenu.forEach(function (link) {
-            link.addEventListener("click", fecharMenuLateral);
-        });
+        btnMenu.addEventListener("click", () => { menu.classList.add("ativo"); fundoMenu.classList.add("ativo"); });
+        fecharMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
+        fundoMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
     </script>
-
     <script src="adocao.js"></script>
 </body>
 

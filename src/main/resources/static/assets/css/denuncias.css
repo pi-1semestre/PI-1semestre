@@ -331,98 +331,87 @@ body {
   opacity: 0.2;
 }
 
-/* --- RODAPÉ --- */
 .rodape {
-  background-color: #634c35;
-  color: #fff;
-  padding: 62px 48px 18px;
+    background: #634c35;
+    color: white;
+    padding: 62px 48px 18px;
 }
+
 .rodape-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 0.8fr;
-  gap: 80px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr .8fr;
+    gap: 80px;
 }
+
 .rodape h3 {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 22px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 22px;
 }
+
 .mapa {
-  width: 100%;
-  max-width: 435px;
-  height: 282px;
-  background-color: #4f3825;
-  border: 1px solid #9a8b77;
-  overflow: hidden;
+    width: 435px;
+    height: 282px;
+    overflow: hidden;
 }
+
 .mapa iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
-.rodape p {
-  font-size: 11px;
-  margin-bottom: 13px;
-  line-height: 1.3;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.rodape p img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
+
 .rodape-botao {
-  font-size: 11px;
-  margin-bottom: 13px;
-  line-height: 1.3;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  text-decoration: none;
+    font-size: 11px;
+    margin-bottom: 13px;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
 }
+
 .rodape-botao img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
-.rodape-botao:hover,
-.redes a:hover {
-  opacity: 0.75;
-}
+
 .redes {
-  margin-top: 190px;
-  text-align: center;
+    margin-top: 190px;
+    text-align: center;
 }
+
 .redes h3 {
-  font-size: 24px;
+    font-size: 24px;
 }
+
 .redes a {
-  display: inline-block;
-  text-decoration: none;
+    text-decoration: none;
 }
+
 .redes img {
-  width: 25px;
-  height: 25px;
-  margin: 0 15px;
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
 }
+
 .linha-rodape {
-  width: 100%;
-  height: 1px;
-  background-color: #9a8b77;
-  margin-top: 38px;
+    width: 100%;
+    height: 1px;
+    background: #9a8b77;
+    margin-top: 38px;
 }
+
 .copy {
-  width: 100%;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  font-size: 8px;
-  margin-top: 16px;
-  margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-size: 8px;
+    margin-top: 16px;
+    margin-bottom: 0;
 }
 
 =======
@@ -908,49 +897,59 @@ body {
   /* ── Footer Padrão ── */
   .rodape {
     padding: 32px 18px 14px;
-  }
-  .rodape-grid {
+}
+
+.rodape-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-  }
-  .rodape h3 {
+}
+
+.rodape h3 {
     font-size: 16px;
     margin-bottom: 12px;
-  }
-  .mapa {
+}
+
+.mapa {
     width: 100%;
     max-width: 100%;
     height: 160px;
-  }
-  .rodape-botao, .rodape p {
+}
+
+.rodape-botao {
     font-size: 12px;
     gap: 8px;
     margin-bottom: 10px;
-    justify-content: center; /* Alinha ícones + texto centralizados no mobile */
-  }
-  .rodape-botao img, .rodape p img {
+}
+
+.rodape-botao img {
     width: 16px;
     height: 16px;
-  }
-  .redes {
+}
+
+.redes {
     margin-top: 8px;
-    text-align: center; /* Centraliza as redes sociais no mobile */
-  }
-  .redes h3 {
+    text-align: left;
+    display: block;
+}
+
+.redes h3 {
     font-size: 16px;
-  }
-  .redes img {
+}
+
+.redes img {
     width: 22px;
     height: 22px;
-    margin: 0 8px;
-  }
-  .linha-rodape {
+    margin: 0 8px 0 0;
+}
+
+.linha-rodape {
     margin-top: 24px;
-  }
-  .copy {
+}
+
+.copy {
     font-size: 8px;
     margin-top: 10px;
-  }
+}
 }
 <<<<<<< Updated upstream
 =======
