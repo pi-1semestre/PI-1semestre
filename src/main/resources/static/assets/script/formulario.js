@@ -1,73 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const form = document.getElementById('formCadastro');
 
-    form.addEventListener('submit', async function(event) {
+    if (!form) {
+        console.error('Formulário com ID "formCadastro" não foi encontrado no HTML.');
+        return;
+    }
 
-        
+    form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        try {
+        const nome = document.getElementById('nome').value.trim();
+        const idade = document.getElementById('idade').value.trim();
+        const email = document.getElementById('email').value.trim();
 
-            const nome = document.getElementById('nome').value.trim();
-            const idade = document.getElementById('idade').value.trim();
-            const email = document.getElementById('email').value.trim();
-
-            /* Cria o email */
-            const respostaEmail = await fetch(
-                'http://127.0.0.1:8081/api/v1/emailVoluntarios',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        email: email
-                    })
-                }
-            );
-
-            if (!respostaEmail.ok) {
-                throw new Error('Erro ao cadastrar email.');
+        // Montando o JSON exatamente na estrutura que a entidade Voluntario espera
+        const dadosCadastro = {
+            nome: nome,
+            idade: Number(idade),
+            emailVoluntario: {
+                email: email
             }
+        };
 
-            const emailCriado = await respostaEmail.json();
-
-            /* Cria o voluntário */
-            const respostaVoluntario = await fetch(
-                'http://127.0.0.1:8081/api/v1/voluntarios',
-                {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        nome: nome,
-                        idade: Number(idade),
-                        emailVoluntario: {
-                            idEmailVoluntario:
-                                emailCriado.idEmailVoluntario
-                        }
-                    })
-                }
-            );
-
-            if (!respostaVoluntario.ok) {
-                throw new Error('Erro ao cadastrar voluntário.');
+        fetch('http://127.0.0.1:8081/api/v1/voluntarios', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosCadastro)
+        })
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Cadastro não pôde ser realizado no servidor.');
             }
-
+            return res.json();
+        })
+        .then(data => {
+            console.log('Sucesso:', data);
             alert('Cadastro realizado com sucesso!');
-
-            form.reset();
-
-        } catch (erro) {
-
-            console.error(erro);
-
-            alert(erro.message);
-
-        }
-
+            form.reset(); // Limpa os campos do formulário
+        })
+        .catch(err => {
+            console.error('Erro na requisição:', err);
+            alert('Erro ao realizar cadastro: ' + err.message);
+        });
     });
-
 });
