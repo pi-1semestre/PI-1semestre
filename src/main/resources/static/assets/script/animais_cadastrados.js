@@ -1,6 +1,6 @@
 class AnimalService {
-    // URL apontando para a sua API de pets (localhost:3000)
-    static BASE_URL = 'http://localhost:3000/api/pets';
+    // URL apontando para a sua API de pets (localhost:8081)
+    static BASE_URL = 'http://localhost:8081/api/v1/animals';
 
     // Método para listar todos os animais
     static async listarAnimais() {
