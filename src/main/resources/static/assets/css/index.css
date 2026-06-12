@@ -125,11 +125,17 @@ body {
 }
 
 #banner .hero-media img {
+<<<<<<< Updated upstream
     width: 500px;
     max-width: 45vw;
     margin-top: 65px;
     position: relative;
     top: 160px
+=======
+    width: 550px;
+    position: relative;
+    top: 175px;
+>>>>>>> Stashed changes
 }
 
 /* ── MISSION ── */
@@ -239,6 +245,7 @@ body {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+<<<<<<< Updated upstream
 /* Efeito de "pulo" e destaque ao passar o mouse */
 .slider-item:hover img {
     transform: translateY(-8px) scale(1.03);
@@ -260,6 +267,21 @@ body {
     }
 }
 
+=======
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-33.33% * 6));
+    }
+}
+
+.slider:hover .slider-track {
+    animation-play-state: paused;
+}
+>>>>>>> Stashed changes
 
 /* ── ADOPTION ── */
 .adoption {
@@ -398,6 +420,7 @@ body {
 /* ═══════════════════════════════════════════
    RESPONSIVO — tablet  (701px – 1024px)
 ═══════════════════════════════════════════ */
+<<<<<<< Updated upstream
 @media (min-width: 701px) and (max-width: 1024px) {
 
     /* ── Header ── */
@@ -566,6 +589,41 @@ body {
         height: 22px;
         margin: 0 10px;
     }
+=======
+@media (max-width: 1024px) {
+    #banner .hero-content h1 {
+        font-size: 58px;
+        line-height: 66px;
+    }
+
+    #banner .hero-media img {
+        width: 450px;
+        max-width: 45vw;
+        position: relative;
+        top: 100px;
+
+    }
+
+    .mission-about h1 {
+        font-size: 36px;
+    }
+
+    .mission-gallery img {
+        width: 25vw;
+    }
+
+    .adoption-image-container img {
+        width: 44vw;
+    }
+
+    .rodape-grid {
+        gap: 36px;
+    }
+
+    .redes {
+        margin-top: 80px;
+    }
+>>>>>>> Stashed changes
 }
 
 /* ═══════════════════════════════════════════
@@ -672,9 +730,14 @@ body {
     #banner .hero-media img {
         width: 80%;
         max-width: 320px;
+<<<<<<< Updated upstream
         margin-top: 0;
         top: 0;
         position: static;
+=======
+        position: relative;
+        top: 50px;
+>>>>>>> Stashed changes
     }
 
     /* ── Mission ── */
@@ -811,6 +874,7 @@ body {
         margin-top: 8px;
         text-align: left;
     }
+<<<<<<< Updated upstream
 
     .redes h3 {
         font-size: 16px;
@@ -829,5 +893,66 @@ body {
     .copy {
         font-size: 8px;
         margin-top: 10px;
+=======
+
+    .redes h3 {
+        font-size: 16px;
+    }
+
+    .redes img {
+        width: 22px;
+        height: 22px;
+        margin: 0 8px 0 0;
+    }
+
+    .linha-rodape {
+        margin-top: 24px;
+    }
+
+    .copy {
+        font-size: 8px;
+        margin-top: 10px;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   RESPONSIVO — pequeno  (≤ 480px)
+═══════════════════════════════════════════ */
+@media (max-width: 480px) {
+    #banner .hero-content h1 {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    #banner .hero-content p {
+        font-size: 14px;
+    }
+
+    .mission-about h1 {
+        font-size: 22px;
+    }
+
+    .adoption-content h1 {
+        font-size: 22px;
+    }
+
+    .adoption-content p {
+        font-size: 14px;
+    }
+
+    .rescue-cases {
+        font-size: 13px;
+    }
+
+    .rescue-cases h1 {
+        font-size: 20px;
+    }
+
+    #banner .hero-media img {
+        width: 90%;
+        max-width: 260px;
+
+        top: 30px;
+>>>>>>> Stashed changes
     }
 }

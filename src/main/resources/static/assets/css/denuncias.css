@@ -182,7 +182,7 @@ body {
   display: flex;
   width: 100%;
   overflow: hidden;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .aviso-imagem {
   flex: 0 0 28%;
@@ -254,10 +254,17 @@ body {
   flex: 1;
 }
 .denuncia-img img {
+<<<<<<< Updated upstream
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+=======
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;;
+>>>>>>> Stashed changes
 }
 .denuncia-conteudo {
   flex: 1.2;
@@ -284,6 +291,7 @@ body {
   gap: 18px;
 }
 .btn {
+<<<<<<< Updated upstream
   width: fit-content;
   display: flex;
   align-items: center;
@@ -417,6 +425,213 @@ body {
   margin-bottom: 0;
 }
 
+=======
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 22px;
+
+    font-weight: 700;
+    font-size: 22px;
+
+    border-radius: 4px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.btn-denuncia {
+    background: #d9470a;
+}
+
+.btn-whatsapp {
+    background: #79bf1f;
+}
+
+/* PATAS */
+
+.pata-grande {
+    position: absolute;
+
+    width: 120px;
+
+    right: 40px;
+    top: 50px;
+
+    opacity: 0.2;
+}
+
+.pata-pequena {
+    position: absolute;
+
+    width: 60px;
+
+    right: 25px;
+    bottom: 25px;
+
+    opacity: 0.2;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .denuncia {
+        flex-direction: column;
+    }
+
+    .denuncia-img {
+        height: 350px;
+    }
+
+    .denuncia-conteudo {
+        padding: 40px;
+    }
+
+    .denuncia-conteudo h2 {
+        font-size: 40px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .denuncia-img {
+        height: 250px;
+    }
+
+    .denuncia-conteudo {
+        padding: 30px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .denuncia-conteudo h2 {
+        font-size: 32px;
+    }
+
+    .denuncia-conteudo p {
+        font-size: 16px;
+    }
+
+    .botoes {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .pata-grande {
+        width: 90px;
+        top: 20px;
+        right: 10px;
+    }
+
+    .pata-pequena {
+        width: 45px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+.rodape{
+    background:#634c35;
+    color:white;
+    padding:62px 48px 18px;
+}
+
+.rodape-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr .8fr;
+    gap:80px;
+}
+
+.rodape h3{
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:22px;
+}
+
+.mapa{
+    width:435px;
+    height:282px;
+    overflow:hidden;
+}
+
+.mapa iframe{
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+.rodape-botao{
+    font-size:11px;
+    margin-bottom:13px;
+    line-height:1.3;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:white;
+    text-decoration:none;
+}
+
+.rodape-botao img{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+}
+
+.redes{
+    margin-top:190px;
+    text-align:center;
+}
+
+.redes h3{
+    font-size:24px;
+}
+
+.redes a{
+    text-decoration:none;
+}
+
+.redes img{
+    width:25px;
+    height:25px;
+    margin:0 15px;
+}
+
+.linha-rodape{
+    width:100%;
+    height:1px;
+    background:#9a8b77;
+    margin-top:38px;
+}
+
+.copy{
+    text-align:center;
+    font-size:8px;
+    margin-top:16px;
+}
+
+
+>>>>>>> Stashed changes
 
 /* =======================================================
    @media (min-width: 701px) and (max-width: 1024px)
@@ -737,3 +952,243 @@ body {
     margin-top: 10px;
   }
 }
+<<<<<<< Updated upstream
+=======
+
+/* =========================
+   TABLETS
+========================= */
+@media (max-width: 1024px) {
+  .cabecalho {
+    padding: 0 20px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .sect-denuncias {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    height: auto;
+    gap: 40px;
+  }
+
+  .sect-denuncias .texts {
+    align-items: center;
+  }
+
+  .sect-denuncias .texts h1 {
+    font-size: 42px;
+  }
+
+  .sect-denuncias .landing-image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .tables {
+    grid-template-columns: 1fr;
+  }
+
+  .aviso {
+    flex-direction: column;
+  }
+
+  .aviso-imagem {
+    height: 300px;
+  }
+
+  .denuncia {
+    flex-direction: column;
+  }
+
+  .denuncia-conteudo {
+    padding: 40px;
+  }
+
+  .rodape-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .mapa {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .redes {
+    margin-top: 0;
+    text-align: left;
+  }
+}
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 180px;
+  }
+
+  .nav-menu {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  .sect-denuncias {
+    padding: 30px 20px;
+  }
+
+  .sect-denuncias .texts h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .sect-denuncias .texts .warning {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sect-denuncias .texts .warning img {
+    width: 50px;
+  }
+
+  .tables {
+    padding: 20px;
+  }
+
+  .titulo h1 {
+    font-size: 20px;
+  }
+
+  .topico {
+    gap: 12px;
+  }
+
+  .topico h1 {
+    font-size: 16px;
+  }
+
+  .topico i {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .aviso-conteudo {
+    padding: 30px 20px;
+  }
+
+  .aviso-conteudo h2 {
+    font-size: 22px;
+  }
+
+  .aviso-texto p {
+    font-size: 14px;
+  }
+
+  .denuncia-conteudo {
+    padding: 30px 20px;
+  }
+
+  .denuncia-conteudo h2 {
+    font-size: 34px;
+  }
+
+  .denuncia-conteudo p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pata-grande {
+    width: 80px;
+    right: 15px;
+    top: 20px;
+  }
+
+  .pata-pequena {
+    width: 45px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .rodape {
+    padding: 40px 20px 20px;
+  }
+
+  .rodape h3 {
+    font-size: 20px;
+  }
+
+  .rodape-botao {
+    font-size: 13px;
+  }
+
+  .redes {
+    text-align: center;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+}
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+@media (max-width: 480px) {
+  .sect-denuncias .texts h1 {
+    font-size: 28px;
+  }
+
+  .denuncia-conteudo h2 {
+    font-size: 28px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .aviso-conteudo h2 {
+    font-size: 20px;
+  }
+
+  .topico h1 {
+    font-size: 15px;
+  }
+
+  .topico i {
+    min-width: 28px;
+    padding: 12px;
+  }
+}
+>>>>>>> Stashed changes
