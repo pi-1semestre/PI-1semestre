@@ -30,23 +30,23 @@ public class Animal {
     @Column(name = "imagem", nullable = false, length = 255)
     private String imagem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_especie_id_especie", nullable = false)
     private Especie especie;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_porte_id_porte", nullable = false)
     private Porte porte;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_pelagem_id_pelagem", nullable = false)
     private Pelagem pelagem;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_sexo_id_sexo", nullable = false)
     private Sexo sexo;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "tb_administrador_id_administrador", nullable = false)
     private Administrador administrador;
 
