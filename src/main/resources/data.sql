@@ -44,13 +44,13 @@ INSERT INTO tb_email_voluntario (email) VALUES
 
 -- Animais (usando os IDs gerados acima: especie 1=Cachorro, 2=Gato; porte 3=Médio, etc.)
 INSERT INTO tb_animal (nome_animal, idade, status, imagem, tb_especie_id_especie, tb_porte_id_porte, tb_pelagem_id_pelagem, tb_sexo_id_sexo, tb_administrador_id_administrador) VALUES
-('Pop', '12', true, 'https://drive.google.com/file/d/1k5-ZaG2pIJFwlN0-U7ey3_F5JN2uRrw8/view?usp=drivesdk', 1, 3, 2, 2, 1),
-('Mel', '3', true, 'https://example.com/mel.jpg', 2, 1, 1, 1, 1),
-('Thor', '5', true, 'https://example.com/thor.jpg', 1, 4, 7, 1, 1),
-('Luna', '1', false, 'https://example.com/luna.jpg', 2, 2, 5, 2, 1);
+('Pop', '12', disponivel, 'https://drive.google.com/file/d/1k5-ZaG2pIJFwlN0-U7ey3_F5JN2uRrw8/view?usp=drivesdk', 1, 3, 2, 2, 1),
+('Mel', '3', disponivel, 'https://example.com/mel.jpg', 2, 1, 1, 1, 1),
+('Thor', '5', disponivel, 'https://example.com/thor.jpg', 1, 4, 7, 1, 1),
+('Luna', '1', indisponivel, 'https://example.com/luna.jpg', 2, 2, 5, 2, 1);
 
--- Voluntários
-INSERT INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_voluntario) VALUES
+-- Voluntários (Usando INSERT IGNORE para evitar falhas de constraint única)
+INSERT IGNORE INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_voluntario) VALUES
 ('Carlos Mendes', 28, 1),
 ('Ana Paula Santos', 34, 2);
 

@@ -7,23 +7,18 @@
     <title>Apoio Pet - Quero Adotar!</title>
     <link rel="stylesheet" href="./assets/css/adocao.css">
     <link rel="icon" href="./assets/imgs/logo_guia.png">
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
     <div class="top-bar-decorator"></div>
-<<<<<<< HEAD
-
-=======
->>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
     <div class="faixa-topo">
         <div class="faixa-amarela"></div>
         <div class="faixa-verde"></div>
         <div class="faixa-vermelha"></div>
     </div>
 
+    <!-- ================= NAVBAR ================= -->
     <header class="cabecalho">
         <img src="./assets/imgs/Logo.png" alt="Apoio Pet" class="logo">
         <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
@@ -33,14 +28,15 @@
             <a href="index.html">Início</a>
             <a href="sobre_nos.html">Sobre Nós</a>
             <a href="casos.html">Casos</a>
-            <a href="denuncia.html">Denúncia</a>
-            <a href="contato.html">Contato</a>
-            <a href="como_ajudar.html" class="btn-ajuda">Como ajudar</a>
+            <a href="denuncias.html">Denúncia</a>
+            <a href="doe.html" class="btn-ajuda">Como ajudar</a>
         </nav>
     </header>
 
+    <!-- ================= HERO & FILTROS ================= -->
     <section class="hero-section">
         <h1>Quero adotar!</h1>
+        
         <div class="search-container">
             <div class="checkbox-group">
                 <label class="custom-checkbox">
@@ -55,15 +51,29 @@
             
             <select id="filtro-porte" class="input-filtro">
                 <option value="">Porte (Todos)</option>
+                <option value="Mini">Mini</option>
                 <option value="Pequeno">Pequeno</option>
-                <option value="Medio">Médio</option>
+                <option value="Médio">Médio</option>
                 <option value="Grande">Grande</option>
+                <option value="Gigante">Gigante</option>
             </select>
+
             <select id="filtro-pelagem" class="input-filtro">
                 <option value="">Pelagem (Todas)</option>
-                <option value="Curta">Curta</option>
-                <option value="Longa">Longa</option>
+                <option value="Branco">Branco</option>
+                <option value="Preto">Preto</option>
+                <option value="Cinza">Cinza</option>
+                <option value="Marrom">Marrom</option>
+                <option value="Laranja">Laranja</option>
+                <option value="Caramelo">Caramelo</option>
+                <option value="Frajola">Frajola</option>
+                <option value="Rajado">Rajado</option>
+                <option value="Siames">Siamês</option>
+                <option value="Dourado">Dourado</option>
+                <option value="Bicolor">Bicolor</option>
+                <option value="Tricolor">Tricolor</option>
             </select>
+
             <select id="filtro-sexo" class="input-filtro">
                 <option value="">Sexo (Todos)</option>
                 <option value="Macho">Macho</option>
@@ -74,110 +84,78 @@
         </div>
     </section>
 
+    <!-- ================= GRID DOS ANIMAIS ================= -->
     <main class="main-content">
         <div id="pets-grid" class="pets-grid">
-            <div class="loading">Carregando amiguinhos...</div>
+            <!-- A mensagem de carregamento ou os cards serão inseridos aqui pelo JavaScript -->
+            <div class="loading">Carregando amiguinhos do banco de dados...</div>
         </div>
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer class="rodape">
-<<<<<<< HEAD
-
-=======
->>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
         <div class="rodape-grid">
             <div class="rodape-coluna">
                 <h3>Onde estamos</h3>
-<<<<<<< HEAD
-
                 <div class="mapa">
                     <iframe
                         src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed"
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-=======
-                <div class="mapa"><iframe src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed" loading="lazy"></iframe></div>
->>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
+            
             <div class="rodape-coluna">
                 <h3>Fale conosco</h3>
-<<<<<<< HEAD
-
                 <a href="tel:08000481212" class="rodape-botao">
                     <img src="./assets/imgs/adocao_imagem/Telefone.png" alt="Telefone">
                     0800-048-1212
                 </a>
-
                 <a href="https://wa.me/554832314000" class="rodape-botao">
                     <img src="./assets/imgs/adocao_imagem/WhatsApp.png" alt="WhatsApp">
                     (48) 3231-4000
                 </a>
-
                 <a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510"
                     class="rodape-botao" target="_blank">
                     <img src="./assets/imgs/adocao_imagem/Localização.png" alt="Localização">
                     R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
                 </a>
-
                 <a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
                     <img src="./assets/imgs/adocao_imagem/Email.png" alt="Email">
                     faleconosco@fiesc.com.br
                 </a>
-=======
-                <a href="tel:08000481212" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Telefone.png" alt="Telefone"> 0800-048-1212</a>
-                <a href="https://wa.me/554832314000" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/WhatsApp.png" alt="WhatsApp"> (48) 3231-4000</a>
->>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
+            
             <div class="rodape-coluna ajuda">
                 <h3>Como ajudar</h3>
-<<<<<<< HEAD
-
                 <a href="./doe.html" class="rodape-botao">
-                    <img src="./assets/imgs/adocao_imagem/Pix.png" alt="Pix">
-                    Pix
+                    <img src="./assets/imgs/adocao_imagem/Pix.png" alt="Pix"> Pix
                 </a>
-
-                <a href="#" class="rodape-botao">
-                    <img src="./assets/imgs/adocao_imagem/Pessoa.png" alt="Pessoa">
-                    Seja voluntario
+                <a href="./formulario.html" class="rodape-botao">
+                    <img src="./assets/imgs/adocao_imagem/Pessoa.png" alt="Pessoa"> Seja voluntário
                 </a>
-
+                
                 <div class="redes">
                     <h3>Siga-nos</h3>
-
                     <a href="#" aria-label="Instagram">
                         <img src="./assets/imgs/adocao_imagem/Instagram.png" alt="Instagram">
                     </a>
-
                     <a href="#" aria-label="Facebook">
                         <img src="./assets/imgs/adocao_imagem/Facebook.png" alt="Facebook">
                     </a>
-
                     <a href="#" aria-label="Linkedin">
                         <img src="./assets/imgs/adocao_imagem/Linkedin.png" alt="Linkedin">
                     </a>
                 </div>
-=======
-                <a href="#" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Pix.png" alt="Pix"> Pix</a>
-                <a href="./formulario.html" class="rodape-botao"><img src="./assets/imgs/adocao_imagem/Pessoa.png" alt="Pessoa"> Seja voluntário</a>
->>>>>>> 44a850bda27151f4dbcc1458c80bfe91caf229ed
             </div>
         </div>
+        <div class="linha-rodape"></div>
         <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        // Menu lógico (Inalterado)
-        const btnMenu = document.getElementById("btnMenu");
-        const fecharMenu = document.getElementById("fecharMenu");
-        const menu = document.getElementById("menu");
-        const fundoMenu = document.getElementById("fundoMenu");
-        btnMenu.addEventListener("click", () => { menu.classList.add("ativo"); fundoMenu.classList.add("ativo"); });
-        fecharMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
-        fundoMenu.addEventListener("click", () => { menu.classList.remove("ativo"); fundoMenu.classList.remove("ativo"); });
-    </script>
-    <script src="adocao.js"></script>
-</body>
+    <!-- ================= SCRIPT ================= -->
+    <!-- Carrega o arquivo JS externo que criamos para gerenciar os dados e o filtro -->
+    <script src="./assets/script/adocao.js"></script>
 
+</body>
 </html>
