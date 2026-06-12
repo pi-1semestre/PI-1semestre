@@ -44,10 +44,16 @@ INSERT INTO tb_email_voluntario (email) VALUES
 
 -- Animais (usando os IDs gerados acima: especie 1=Cachorro, 2=Gato; porte 3=Médio, etc.)
 INSERT INTO tb_animal (nome_animal, idade, status, imagem, tb_especie_id_especie, tb_porte_id_porte, tb_pelagem_id_pelagem, tb_sexo_id_sexo, tb_administrador_id_administrador) VALUES
-('Pop', '12', disponivel, 'https://drive.google.com/file/d/1k5-ZaG2pIJFwlN0-U7ey3_F5JN2uRrw8/view?usp=drivesdk', 1, 3, 2, 2, 1),
-('Mel', '3', disponivel, 'https://example.com/mel.jpg', 2, 1, 1, 1, 1),
-('Thor', '5', disponivel, 'https://example.com/thor.jpg', 1, 4, 7, 1, 1),
-('Luna', '1', indisponivel, 'https://example.com/luna.jpg', 2, 2, 5, 2, 1);
+('Amora', '12', disponivel, 'https://drive.google.com/file/d/1ffi355zDDI62aOjVCDDbui1pMS22zlvX/view?usp=drive_link', 1, 3, 11, 2, 1),
+('Bento', '3', disponivel, 'https://drive.google.com/file/d/129eG3XdFt51WllJ9SOS5ZpUR6tbxQFcy/view?usp=drive_link', 1, 2, 12, 1, 1),
+('Blanco', '5', disponivel, 'https://drive.google.com/file/d/1z4s01-MgvCKu49QIAqw2HbjnW4L47WTU/view?usp=drive_link', 1, 4, 6, 2, 1),
+('Cacau', '1', indisponivel, 'https://drive.google.com/file/d/1US8qXFUdrhf03X_pZ-yv-UmJQ3ic0xwb/view?usp=drive_link', 1, 3, 6, 1, 1),
+('Dani', '1', indisponivel, 'https://drive.google.com/file/d/1NEitIdmtDIsPMoZZvrv2y54_kmEOIl1W/view?usp=drive_link', 1, 1, 2, 1, 1),
+('Fred', '9', disponivel, 'https://drive.google.com/file/d/1N63wggY8sic4fX18cSX1XEhNsMUep4Ub/view?usp=drive_link', 2, 3, 11 ,1, 1),
+('Frida', '1', disponivel, 'https://drive.google.com/file/d/1WVNUa8tkiKrCciWhODpRQuKpCfKH3zLu/view?usp=drive_link', 1, 2, 12, 2, 1),
+('Simon', '8', disponivel, 'https://drive.google.com/file/d/1MLUDQjhw9vTWuqyyOklNpduP_bikcbhx/view?usp=drive_link', 2, 3, 11, 1, 1),
+('Linda', '7', disponivel, 'https://drive.google.com/file/d/19WVAzvtBd0dzxRVoWpkOFaBYYSYa73Ys/view?usp=drive_link', 2, 3, 2, 2, 1),
+('Lola', '4', disponivel, 'https://drive.google.com/file/d/1C6rz-8wtSVZvZ0mJC9kNl-K37n3Ig8lk/view?usp=drive_link', 2, 3, 11, 2 ,1);
 
 -- Voluntários (Usando INSERT IGNORE para evitar falhas de constraint única)
 INSERT IGNORE INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_voluntario) VALUES
@@ -56,5 +62,9 @@ INSERT IGNORE INTO tb_voluntarios (nome, idade, tb_email_voluntario_id_email_vol
 
 -- Mensagens / Relatos de resgate
 INSERT INTO tb_mensagem (descricao, status, imagem_antes, imagem_depois, nome_animal, idade_animal) VALUES
-('Encontrei este cachorro machucado na rua das Palmeiras.', true, 'https://example.com/antes1.jpg', 'https://example.com/depois1.jpg', 'Rex', 3),
-('Gatinha com filhotes abandonada no terreno baldio.', true, 'https://example.com/antes2.jpg', 'https://example.com/depois2.jpg', 'Mimi', 2);
+('Thor foi encontrado nas ruas, assustado e muito magro. Com cuidados, alimentação e carinho, se recuperou e hoje vive com mais segurança.', true, 'https://drive.google.com/file/d/1EsNZshv-1SnaHlASy9e3mICbaj5HUKX6/view?usp=drive_link', 'https://drive.google.com/file/d/1sTAlxKvyqXzAsqs8xH9JQr0IlHuNWr31/view?usp=drive_link', 'Thor', 4),
+('Bob vivia em situação de abandono. Após receber acompanhamento e cuidados, melhorou sua saúde e passou a viver com mais tranquilidade.    ', true, 'https://drive.google.com/file/d/169qwZcdZ1K88dhbO63F_UER_t6u1uYQu/view?usp=drive_link','https://drive.google.com/file/d/1D089uqQpH8naVEet2Y9PpA1PrpRXl0UK/view?usp=drive_link', 'Bob', 5),
+('Max passou por momentos difíceis antes do resgate. Depois de ser acolhido, ganhou energia, saúde e voltou a brincar.', true, 'https://drive.google.com/file/d/1-q91JMoBc1y2PxfArSZGO4nzFMIgFU5D/view?usp=drive_link', 'https://drive.google.com/file/d/1VcY940b2CPMWCRltrnnAKD-0uyxMPJlg/view?usp=drive_link', 'Max', 6),
+('Luna foi resgatada precisando de cuidados urgentes. Com tratamento, alimentação e carinho, conseguiu se recuperar muito bem.', true, 'https://drive.google.com/file/d/1ocNJsp98SLJrbpeGQ3spGWGhcQ9pXBYQ/view?usp=drive_link', 'https://drive.google.com/file/d/1I43JTmtaCVm1fyuKN6wp2QIW3FIPE8wn/view?usp=drive_link', 'Luna', 3),
+('Mel chegou debilitada e com medo. Depois do resgate, recebeu tratamento, voltou a confiar nas pessoas e ganhou uma nova chance.', false, 'https://drive.google.com/file/d/1s3RvxbPfdqi86QPvHOxhpNtGr1MotO0z/view?usp=drive_link', 'https://drive.google.com/file/d/17JEhAvrC5N_cfEPrHdO96gC-8IBC4RYx/view?usp=drive_link', 'Mel', 2),
+('Nina foi encontrada ainda jovem, frágil e precisando de proteção. Após o resgate, ficou saudável e cheia de vida.', true, 'https://drive.google.com/file/d/1jlyjhJkI9fgvdWKnjWPxcixr1AaHHQV_/view?usp=drive_link', 'https://drive.google.com/file/d/1moQDcvXUPj7z-4PxOj4uWyAexou2NzF3/view?usp=drive_link', 'Nina', 1);
