@@ -16,11 +16,12 @@ public class Voluntario {
     @Column(name = "idade", nullable = false)
     private Integer idade;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tb_email_voluntario_id_email_voluntario", nullable = false)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "tb_email_voluntario_id_email_voluntario", referencedColumnName = "id_email_voluntario")
     private EmailVoluntario emailVoluntario;
 
-    public Voluntario() {}
+    public Voluntario() {
+    }
 
     public Voluntario(Long idVoluntario, String nome, Integer idade, EmailVoluntario emailVoluntario) {
         this.idVoluntario = idVoluntario;
