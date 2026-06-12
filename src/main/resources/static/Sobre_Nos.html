@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -182,10 +183,9 @@
                 <h3>Onde estamos</h3>
 
                 <div class="mapa">
-                    <iframe 
+                    <iframe
                         src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
             </div>
@@ -193,39 +193,40 @@
             <div class="rodape-coluna">
                 <h3>Fale conosco</h3>
 
-               <a href="tel:08000481212" class="rodape-botao">
-    <img src="./assets/imgs/sobre_nos_img/Telefone.png" alt="Telefone">
-    0800-048-1212
-</a>
+                <a href="tel:08000481212" class="rodape-botao">
+                    <img src="./assets/imgs/sobre_nos_img/Telefone.png" alt="Telefone">
+                    0800-048-1212
+                </a>
 
-<a href="https://wa.me/554832314000" class="rodape-botao">
-    <img src="./assets/imgs/sobre_nos_img/whatsapp.png" alt="WhatsApp">
-    (48) 3231-4000
-</a>
+                <a href="https://wa.me/554832314000" class="rodape-botao">
+                    <img src="./assets/imgs/sobre_nos_img/whatsapp.png" alt="WhatsApp">
+                    (48) 3231-4000
+                </a>
 
-<a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510" class="rodape-botao" target="_blank">
-    <img src="./assets/imgs/sobre_nos_img/Localização.png" alt="Localização">
-    R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
-</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510"
+                    class="rodape-botao" target="_blank">
+                    <img src="./assets/imgs/sobre_nos_img/Localização.png" alt="Localização">
+                    R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
+                </a>
 
-<a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
-    <img src="./assets/imgs/sobre_nos_img/Email.png" alt="Email">
-    faleconosco@fiesc.com.br
-</a>
+                <a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
+                    <img src="./assets/imgs/sobre_nos_img/Email.png" alt="Email">
+                    faleconosco@fiesc.com.br
+                </a>
             </div>
 
             <div class="rodape-coluna ajuda">
                 <h3>Como ajudar</h3>
 
-              <a href="#" class="rodape-botao">
-    <img src="./assets/imgs/sobre_nos_img/Pix.png">
-    Pix
-</a>
+                <a href="./doe.html" class="rodape-botao">
+                    <img src="./assets/imgs/sobre_nos_img/Pix.png">
+                    Pix
+                </a>
 
-<a href="#" class="rodape-botao">
-    <img src="./assets/imgs/sobre_nos_img/Pessoa.png">
-    Seja voluntario
-</a>
+                <a href="#" class="rodape-botao">
+                    <img src="./assets/imgs/sobre_nos_img/Pessoa.png">
+                    Seja voluntario
+                </a>
 
                 <div class="redes">
                     <h3>Siga-nos</h3>
@@ -251,31 +252,32 @@
         <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
 
     </footer>
-<script>
-    const btnMenu = document.getElementById("btnMenu");
-    const fecharMenu = document.getElementById("fecharMenu");
-    const menu = document.getElementById("menu");
-    const fundoMenu = document.getElementById("fundoMenu");
+    <script>
+        const btnMenu = document.getElementById("btnMenu");
+        const fecharMenu = document.getElementById("fecharMenu");
+        const menu = document.getElementById("menu");
+        const fundoMenu = document.getElementById("fundoMenu");
 
-    function abrirMenu() {
-        menu.classList.add("ativo");
-        fundoMenu.classList.add("ativo");
-    }
+        function abrirMenu() {
+            menu.classList.add("ativo");
+            fundoMenu.classList.add("ativo");
+        }
 
-    function fecharMenuLateral() {
-        menu.classList.remove("ativo");
-        fundoMenu.classList.remove("ativo");
-    }
+        function fecharMenuLateral() {
+            menu.classList.remove("ativo");
+            fundoMenu.classList.remove("ativo");
+        }
 
-    btnMenu.addEventListener("click", abrirMenu);
-    fecharMenu.addEventListener("click", fecharMenuLateral);
-    fundoMenu.addEventListener("click", fecharMenuLateral);
+        btnMenu.addEventListener("click", abrirMenu);
+        fecharMenu.addEventListener("click", fecharMenuLateral);
+        fundoMenu.addEventListener("click", fecharMenuLateral);
 
-    const linksMenu = document.querySelectorAll(".menu a");
+        const linksMenu = document.querySelectorAll(".menu a");
 
-    linksMenu.forEach(function (link) {
-        link.addEventListener("click", fecharMenuLateral);
-    });
-</script>
+        linksMenu.forEach(function (link) {
+            link.addEventListener("click", fecharMenuLateral);
+        });
+    </script>
 </body>
+
 </html>
