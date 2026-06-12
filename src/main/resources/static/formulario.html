@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seja um Voluntário</title>
     <link rel="stylesheet" href="./assets/css/formulario.css">
-
+    <link rel="icon" href="./assets/imgs/logo_guia.png">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
     <section class="voluntario">
@@ -26,32 +28,20 @@
         </div>
 
         <div class="form-container">
-            <form>
+            <form id="formCadastro">
                 <div class="campo">
                     <label for="nome">Nome completo</label>
-                    <input
-                        type="text"
-                        id="nome"
-                        placeholder="Digite seu nome"
-                    >
+                    <input type="text" id="nome" placeholder="Digite seu nome">
                 </div>
 
                 <div class="campo">
                     <label for="idade">Idade</label>
-                    <input
-                        type="number"
-                        id="idade"
-                        placeholder="Digite sua idade"
-                    >
+                    <input type="number" id="idade" placeholder="Digite sua idade">
                 </div>
 
                 <div class="campo">
                     <label for="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Digite seu e-mail"
-                    >
+                    <input type="email" id="email" placeholder="Digite seu e-mail">
                 </div>
 
                 <button type="submit">
@@ -62,5 +52,8 @@
         </div>
     </section>
 
+    <script src="./assets/script/formulario.js"></script>
+
 </body>
+
 </html>

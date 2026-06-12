@@ -1,6 +1,6 @@
 class AnimalService {
-    // Mantendo a mesma URL da sua API de pets
-    static BASE_URL = 'http://localhost:3000/api/pets';
+    // URL apontando para a sua API de pets (localhost:8081)
+    static BASE_URL = 'http://localhost:8081/api/v1/animals';
 
     // Método para enviar os dados do novo animal (POST)
     static async cadastrarAnimal(animalData) {
