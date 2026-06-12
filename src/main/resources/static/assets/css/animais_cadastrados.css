@@ -1,91 +1,258 @@
 :root {
     --bg-creme: #FDFBF4;
-    --vermelho-titulo: #C9302C;
-    --card-bg: #FFF;
-    --verde-publicar: #8CC63F;
-    --rosa-deletar: #D88A8A;
-    --rosa-switch-bg: #E2A7A7;
+    --amarelo-titulo: #D3A13B;
+    --card-bg: #F6EAC9; /* Amarelo exato do card do design */
+    --texto-escuro: #4F4F4F;
+    --rosa-femea: #FF4DE4;
+    --azul-macho: #33A1FD;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-body { background-color: var(--bg-creme); color: #333; min-height: 100vh; }
 
-/* Topo com Título Centralizado e Seta na Esquerda */
-.topo-pagina {
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centraliza o título */
-    align-items: center;
-    margin-bottom: 35px;
-}
-.topo-pagina h1 { color: #D3A13B; font-size: 36px; font-weight: 700; }
-.btn-voltar-circulo {
-    position: absolute;
-    left: 0; /* Crava o botão na esquerda */
-    display: flex; align-items: center; justify-content: center;
-    width: 35px; height: 35px; background-color: #D3A13B; border-radius: 50%;
-}
+body { background-color: var(--bg-creme); color: #333; min-height: 100vh; overflow-x: hidden; }
 
-/* Ajuste Fiel do Card */
-.pet-card {
-    background-color: #F6EAC9; /* O amarelo clarinho exato do seu design */
-    border-radius: 6px;
-    padding: 12px;
-    display: flex; flex-direction: column; position: relative;
-}
-.btn-detalhes-mais {
-    position: absolute;
-    bottom: 12px; right: 12px;
-    width: 28px; height: 28px;
-    background-color: #E6DCAB; /* Fundo verdinho/amarelo do botão + */
-    border: none; border-radius: 4px; /* Mais quadrado, igual ao design */
-    color: #333; font-size: 20px; font-weight: bold; cursor: pointer;
-}
 /* Navbar */
 .navbar-admin { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background-color: var(--bg-creme); border-bottom: 1px solid #EFECE3; }
 .logo-container { display: flex; align-items: center; gap: 10px; font-size: 22px; }
 .logo-img { width: 50px; height: auto; }
-.nav-links { display: flex; gap: 30px; }
-.nav-links a { text-decoration: none; color: #8C7863; font-weight: 500; }
+.nav-links {:root {
+    --bg-creme: #FDFBF4;
+    --amarelo-titulo: #D3A13B;
+    --card-bg: #F6EAC9; /* Amarelo exato do card do design */
+    --texto-escuro: #4F4F4F;
+    --rosa-femea: #FF4DE4;
+    --azul-macho: #33A1FD;
+}
 
-/* Topo */
-.main-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-.topo-pagina { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-.titulo-esquerda { display: flex; align-items: center; gap: 15px; }
-.topo-pagina h1 { color: var(--vermelho-titulo); font-size: 36px; font-weight: 700; }
-.btn-voltar-circulo { display: flex; align-items: center; justify-content: center; width: 35px; height: 35px; background-color: var(--vermelho-titulo); border-radius: 50%; text-decoration: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-/* Switch Toggle (Idêntico ao design) */
-.toggle-container { display: flex; align-items: center; gap: 10px; background-color: var(--rosa-switch-bg); padding: 6px 14px; border-radius: 20px; }
-.toggle-container span { color: #555; font-size: 14px; font-weight: 600; }
-.switch { position: relative; display: inline-block; width: 34px; height: 18px; }
-.switch input { opacity: 0; width: 0; height: 0; }
-.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #B96B6B; border-radius: 34px; transition: .4s; }
-.slider:before { position: absolute; content: ""; height: 14px; width: 14px; left: 2px; bottom: 2px; background-color: white; border-radius: 50%; transition: .4s; }
-input:checked + .slider { background-color: var(--vermelho-titulo); }
-input:checked + .slider:before { transform: translateX(16px); }
+body { background-color: var(--bg-creme); color: #333; min-height: 100vh; overflow-x: hidden; }
 
-/* Cards */
-.historias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-.story-card { background-color: var(--card-bg); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+/* Navbar */
+.navbar-admin { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background-color: var(--bg-creme); border-bottom: 1px solid #EFECE3; }
 
-/* Barra Vermelha do Card */
-.card-topo-vermelho { background-color: var(--vermelho-titulo); color: white; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 15px; }
-.nome-pet { display: flex; align-items: center; gap: 8px; }
-.bolinha-amarela { width: 14px; height: 14px; background-color: #FFD700; border-radius: 50%; }
+.logo-container { display: flex; align-items: center; gap: 10px; font-size: 22px; }
 
-.card-body { padding: 15px; background-color: #FDFBF4;}
-.card-images { display: flex; gap: 8px; margin-bottom: 15px; }
-.img-wrapper { flex: 1; position: relative; height: 130px; border-radius: 4px; overflow: hidden; }
+.logo-img { width: 50px; height: auto; }
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+
+.nav-links a { text-decoration: none; color: #8C7863; font-weight: 500; transition: color 0.2s ease; }
+
+.nav-links a.active, .nav-links a:hover { color: var(--amarelo-titulo); }
+
+/* Esconde menu mobile no desktop */
+.menu-mobile, .fechar-menu, .fundo-menu { display: none; }
+
+/* Topo e Título */
+.main-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+.topo-pagina { position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 40px; }
+
+.topo-pagina h1 { color: var(--amarelo-titulo); font-size: 40px; font-weight: 700; text-align: center; }
+
+.btn-voltar-circulo {
+    position: absolute; left: 0; display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; background-color: var(--amarelo-titulo); border-radius: 50%; text-decoration: none; transition: transform 0.2s;
+}
+
+.btn-voltar-circulo:hover { transform: scale(1.05); }
+
+/* Grid de 4 Colunas */
+.animais-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+/* Layout do Card (Igual à imagem) */
+.pet-card { background-color: var(--card-bg); border-radius: 6px; padding: 12px; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.2s; }
+
+.pet-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+
+.img-wrapper { width: 100%; height: 160px; border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+
 .img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-.badge { position: absolute; bottom: 0; left: 0; padding: 2px 8px; font-size: 11px; font-weight: bold; color: white; }
-.badge-antes { background-color: #C9302C; }
-.badge-depois { background-color: #5CB85C; }
 
-.card-text { font-size: 13px; line-height: 1.4; color: #333; margin-bottom: 15px; }
+.pet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
 
-/* Botões Pílula */
-.card-actions { display: flex; gap: 10px; }
-.btn-action { flex: 1; padding: 8px; border: none; border-radius: 20px; font-size: 13px; font-weight: 600; color: white; cursor: pointer; }
-.btn-publicar { background-color: var(--verde-publicar); }
-.btn-deletar { background-color: var(--rosa-deletar); }
+.pet-header h3 { font-size: 16px; color: #333; font-weight: 600; }
+
+.gender-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: bold; }
+
+.gender-icon.femea { background-color: var(--rosa-femea); }
+
+.gender-icon.macho { background-color: var(--azul-macho); }
+
+.pet-info p { font-size: 13px; color: #444; margin-bottom: 6px; }
+
+.pet-info strong { font-weight: 600; color: #222; }
+
+/* Botões de Ação */
+.card-actions { display: flex; gap: 8px; margin-top: 15px; }
+
+.btn-action { flex: 1; padding: 6px; border: none; border-radius: 4px; font-size: 12px; font-weight: 600; color: white; cursor: pointer; transition: 0.2s; }
+
+.btn-editar { background-color: #5BA85B; }
+
+.btn-editar:hover { background-color: #488748; }
+
+.btn-excluir { background-color: #D9534F; }
+
+.btn-excluir:hover { background-color: #B53F3B; }
+
+/* ==========================================
+   RESPONSIVIDADE (Telas Menores)
+========================================== */
+
+/* Tablets / Telas médias (Abaixa para 3 colunas) */
+@media (max-width: 1024px) {
+    .animais-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Celulares Grandes / Tablets em pé (Abaixa para 2 colunas e ativa o Menu) */
+@media (max-width: 768px) {
+    .animais-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .topo-pagina { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .topo-pagina h1 { font-size: 32px; text-align: left; padding-left: 50px; } 
+    .btn-voltar-circulo { top: 0; }
+
+    /* Ativação do Menu Hamburguer */
+    .menu-mobile { 
+        display: block; font-size: 32px; background: none; border: none; 
+        color: var(--amarelo-titulo); cursor: pointer; 
+        z-index: 90; /* CORRIGIDO: Agora está atrás do menu lateral */
+    }
+    
+    /* Fundo Escuro do Menu */
+    .fundo-menu { 
+        display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); 
+        z-index: 95; transition: opacity 0.3s; opacity: 0; 
+    }
+    .fundo-menu.ativo { display: block; opacity: 1; }
+    
+    /* Menu Lateral Deslizante */
+    .nav-links {
+        position: fixed; top: 0; right: -280px; width: 260px; height: 100vh;
+        background-color: var(--bg-creme); padding: 70px 25px 25px; 
+        z-index: 100; /* CORRIGIDO: Tem a maior prioridade da tela */
+        display: flex; flex-direction: column; align-items: flex-start; gap: 20px;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1); transition: right 0.3s ease-in-out;
+    }
+    .nav-links.ativo { right: 0; }
+    
+    /* Botão "X" de Fechar Menu */
+    .fechar-menu { 
+        display: block; position: absolute; top: 15px; right: 20px; 
+        background: none; border: none; font-size: 36px; 
+        color: var(--amarelo-titulo); cursor: pointer; 
+    }
+}
+
+/* Celulares Pequenos (Abaixa para 1 coluna) */
+@media (max-width: 480px) {
+    .animais-grid { grid-template-columns: 1fr; }
+    .topo-pagina h1 { font-size: 28px; padding-left: 45px; }
+}
+ display: flex; gap: 30px; align-items: center; }
+.nav-links a { text-decoration: none; color: #8C7863; font-weight: 500; transition: color 0.2s ease; }
+.nav-links a.active, .nav-links a:hover { color: var(--amarelo-titulo); }
+
+/* Esconde menu mobile no desktop */
+.menu-mobile, .fechar-menu, .fundo-menu { display: none; }
+
+/* Topo e Título */
+.main-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+.topo-pagina { position: relative; display: flex; justify-content: center; align-items: center; margin-bottom: 40px; }
+.topo-pagina h1 { color: var(--amarelo-titulo); font-size: 40px; font-weight: 700; text-align: center; }
+.btn-voltar-circulo {
+    position: absolute; left: 0; display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; background-color: var(--amarelo-titulo); border-radius: 50%; text-decoration: none; transition: transform 0.2s;
+}
+.btn-voltar-circulo:hover { transform: scale(1.05); }
+
+/* Grid de 4 Colunas */
+.animais-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+/* Layout do Card (Igual à imagem) */
+.pet-card { background-color: var(--card-bg); border-radius: 6px; padding: 12px; display: flex; flex-direction: column; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: transform 0.2s; }
+.pet-card:hover { transform: translateY(-5px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+
+.img-wrapper { width: 100%; height: 160px; border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+.img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+
+.pet-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.pet-header h3 { font-size: 16px; color: #333; font-weight: 600; }
+
+.gender-icon { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: bold; }
+.gender-icon.femea { background-color: var(--rosa-femea); }
+.gender-icon.macho { background-color: var(--azul-macho); }
+
+.pet-info p { font-size: 13px; color: #444; margin-bottom: 6px; }
+.pet-info strong { font-weight: 600; color: #222; }
+
+/* Botões de Ação */
+.card-actions { display: flex; gap: 8px; margin-top: 15px; }
+.btn-action { flex: 1; padding: 6px; border: none; border-radius: 4px; font-size: 12px; font-weight: 600; color: white; cursor: pointer; transition: 0.2s; }
+.btn-editar { background-color: #5BA85B; }
+.btn-editar:hover { background-color: #488748; }
+.btn-excluir { background-color: #D9534F; }
+.btn-excluir:hover { background-color: #B53F3B; }
+
+/* ==========================================
+   RESPONSIVIDADE (Telas Menores)
+========================================== */
+
+/* Tablets / Telas médias (Abaixa para 3 colunas) */
+@media (max-width: 1024px) {
+    .animais-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Celulares Grandes / Tablets em pé (Abaixa para 2 colunas e ativa o Menu) */
+@media (max-width: 768px) {
+    .animais-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .topo-pagina { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .topo-pagina h1 { font-size: 32px; text-align: left; padding-left: 50px; } 
+    .btn-voltar-circulo { top: 0; }
+
+    /* Ativação do Menu Hamburguer */
+    /* Ativação do Menu Hamburguer */
+    .menu-mobile { 
+        display: block; font-size: 32px; background: none; border: none; 
+        color: var(--amarelo-titulo); cursor: pointer; 
+        transition: opacity 0.2s; /* Para um efeito suave */
+    }
+    
+    /* ESSA É A CLASSE NOVA QUE VAI ESCONDER O BOTÃO: */
+    .menu-mobile.escondido {
+        opacity: 0;
+        pointer-events: none; /* Impede que o botão fantasma seja clicado */
+    }
+
+    /* Fundo Escuro do Menu */
+    .fundo-menu { 
+        display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); 
+        z-index: 99; transition: opacity 0.3s; opacity: 0; 
+    }
+    .fundo-menu.ativo { display: block; opacity: 1; }
+    
+    /* Menu Lateral Deslizante */
+    .nav-links {
+        position: fixed; top: 0; right: -280px; width: 260px; height: 100vh;
+        background-color: var(--bg-creme); padding: 70px 25px 25px; z-index: 100;
+        display: flex; flex-direction: column; align-items: flex-start; gap: 20px;
+        box-shadow: -4px 0 15px rgba(0,0,0,0.1); transition: right 0.3s ease-in-out;
+    }
+    .nav-links.ativo { right: 0; }
+    
+    /* Botão "X" de Fechar Menu */
+    .fechar-menu { 
+        display: block; position: absolute; top: 15px; right: 20px; 
+        background: none; border: none; font-size: 36px; 
+        color: var(--amarelo-titulo); cursor: pointer; 
+    }
+}
+
+/* Celulares Pequenos (Abaixa para 1 coluna) */
+@media (max-width: 480px) {
+    .animais-grid { grid-template-columns: 1fr; }
+    .topo-pagina h1 { font-size: 28px; padding-left: 45px; }
+}

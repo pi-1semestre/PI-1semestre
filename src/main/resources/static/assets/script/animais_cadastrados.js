@@ -1,130 +1,110 @@
 class AnimalService {
-    // URL apontando para a sua API de pets (localhost:8081)
     static BASE_URL = 'http://localhost:8081/api/v1/animals';
 
-    // Método para listar todos os animais
     static async listarAnimais() {
         try {
             const response = await fetch(this.BASE_URL);
-            if (!response.ok) {
-                throw new Error(`Erro ${response.status}: ${response.statusText}`);
-            }
+            if (!response.ok) throw new Error(`Erro: ${response.status}`);
             return await response.json();
         } catch (error) {
             console.error('Erro ao buscar animais:', error);
-            throw new Error('Não foi possível carregar os animais cadastrados. Verifique sua conexão.');
+            return [];
         }
     }
 
-    // Método extra para o ADM poder excluir um animal do sistema
     static async excluirAnimal(id) {
-        try {
-            const response = await fetch(`${this.BASE_URL}/${id}`, {
-                method: 'DELETE'
-            });
-            if (!response.ok) {
-                throw new Error(`Erro ${response.status}: ${response.statusText}`);
-            }
-            return true;
-        } catch (error) {
-            console.error('Erro ao excluir animal:', error);
-            throw new Error('Não foi possível excluir o animal do sistema.');
-        }
+        const response = await fetch(`${this.BASE_URL}/${id}`, { method: 'DELETE' });
+        if (!response.ok) throw new Error(`Erro ao excluir: ${response.status}`);
+        return true;
     }
 }
 
-// Aguarda o DOM carregar completamente
 document.addEventListener('DOMContentLoaded', async function() {
-    console.log('DOM carregado, iniciando carregamento de animais no painel ADM...');
-
     await carregarAnimais();
+    gerenciarMenuMobile();
 });
 
 async function carregarAnimais() {
-    try {
-        console.log('Iniciando carregamento de animais...');
-        const animais = await AnimalService.listarAnimais();
-        console.log('Animais carregados:', animais);
+    const grid = document.getElementById('grid-animais');
+    if (!grid) return;
 
-        const mainElement = document.querySelector('main');
-        if (!mainElement) {
-            console.error('Elemento main não encontrado!');
-            return;
-        }
+    grid.innerHTML = '<p style="text-align:center; width:100%;">Carregando...</p>';
+    const animais = await AnimalService.listarAnimais();
 
-        // Limpar conteúdo de loading/anterior
-        mainElement.innerHTML = '';
-
-        if (animais.length === 0) {
-            mainElement.innerHTML = '<div class="aviso">Nenhum animal cadastrado no sistema.</div>';
-            return;
-        }
-
-        // Adicionar animais dinamicamente em formato de Gerenciamento (Card Adm)
-        animais.forEach(animal => {
-            const animalDiv = document.createElement('div');
-            animalDiv.className = 'animal-adm-card'; 
-
-            // Adapte as propriedades (animal.especie, animal.idade) de acordo com o seu JSON do back-end
-            animalDiv.innerHTML = `
-                <div class="info">
-                    <h1>ID: #${animal.id} - ${animal.nome}</h1>
-                    <h2><i class="fa-solid fa-paw"></i> ${animal.especie} (${animal.raca || 'Sem raça definida'})</h2>
-                    <p>Idade: ${animal.idade || 'Não informada'} | Status: <strong>${animal.status || 'Disponível'}</strong></p>
-                </div>
-                <div class="acoes-adm">
-                    <button class="btn-editar" onclick="editarAnimal(${animal.id})">
-                        <i class="fa-solid fa-pen-to-square"></i> EDITAR
-                    </button>
-                    <button class="btn-excluir" onclick="deletarAnimal(${animal.id}, '${animal.nome}')">
-                        <i class="fa-solid fa-trash"></i> EXCLUIR
-                    </button>
-                </div>
-            `;
-            mainElement.appendChild(animalDiv);
-        });
-
-        console.log('Animais renderizados com sucesso no painel ADM!');
-
-    } catch (error) {
-        console.error('Erro ao carregar animais:', error);
-
-        const mainElement = document.querySelector('main');
-        if (mainElement) {
-            mainElement.innerHTML = `
-                <div class="erro">
-                    <p>Erro ao carregar painel de animais: ${error.message}</p>
-                    <button onclick="carregarAnimais()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #8B7355; color: white; border: none; border-radius: 5px; cursor: pointer;">
-                        Tentar Novamente
-                    </button>
-                </div>
-            `;
-        }
+    grid.innerHTML = '';
+    if (animais.length === 0) {
+        grid.innerHTML = '<p style="text-align:center; width:100%;">Nenhum animal cadastrado no sistema.</p>';
+        return;
     }
+
+    animais.forEach(animal => {
+        // CORREÇÃO DOS NOMES: Usando as variáveis que o Java manda!
+        const id = animal.idAnimal;
+        const nome = animal.nomeAnimal || 'Sem nome';
+        const idade = animal.idade || 'indeterminado';
+        const porte = animal.porte?.porte || 'Não definido';
+        const pelagem = animal.pelagem?.pelagem || 'Não definida';
+        const sexo = animal.sexo?.sexo || 'F';
+        const imagem = animal.imagem || './assets/imgs/placeholder.png';
+
+        const isFemea = sexo.toUpperCase() === 'F';
+        const iconeSexo = isFemea ? '♀' : '♂';
+        const classeSexo = isFemea ? 'femea' : 'macho';
+
+        const card = document.createElement('div');
+        card.className = 'pet-card';
+        card.id = `animal-card-${id}`;
+
+        card.innerHTML = `
+            <div class="img-wrapper">
+                <img src="${imagem}" alt="${nome}" onerror="this.onerror=null; this.src='./assets/imgs/placeholder.png';">
+            </div>
+            <div class="pet-info">
+                <div class="pet-header">
+                    <h3>${nome}</h3>
+                    <div class="gender-icon ${classeSexo}">${iconeSexo}</div>
+                </div>
+                <p><strong>Porte:</strong> ${porte}</p>
+                <p><strong>Idade:</strong> ${idade}</p>
+                <p><strong>Pelagem:</strong> ${pelagem}</p>
+            </div>
+            <div class="card-actions">
+                <button class="btn-action btn-editar" onclick="editarAnimal(${id})">Editar</button>
+                <button class="btn-action btn-excluir" onclick="deletarAnimal(${id}, '${nome}')">Excluir</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
 }
 
-// Função executada ao clicar em EDITAR
 function editarAnimal(animalId) {
-    console.log('Redirecionando para editar o animal:', animalId);
-    // Salva o ID que o administrador quer editar para resgatar na página de formulário
-    localStorage.setItem('animalParaEditar', animalId);
-    window.location.href = 'editarAnimal.html'; // Altere para o nome da sua página de edição
+    // Redireciona para a página de edição com o ID na URL
+    window.location.href = `cadastro_animal.html?id=${animalId}`;
 }
 
-// Função executada ao clicar em EXCLUIR
 async function deletarAnimal(animalId, nomeAnimal) {
-    const confirmar = confirm(`Tem certeza que deseja excluir permanentemente o pet "${nomeAnimal}" do sistema?`);
-    
-    if (confirmar) {
+    if (confirm(`Tem certeza que deseja excluir o pet "${nomeAnimal}" do sistema?`)) {
         try {
-            console.log('Deletando animal de ID:', animalId);
             await AnimalService.excluirAnimal(animalId);
             alert('Animal removido com sucesso!');
-            
-            // Recarrega a lista atualizada após a exclusão
-            await carregarAnimais();
+            // Remove o card da tela
+            document.getElementById(`animal-card-${animalId}`).remove();
         } catch (error) {
-            alert(`Erro ao excluir: ${error.message}`);
+            alert(`Não foi possível excluir o animal.`);
+            console.error(error);
         }
     }
+}
+
+// Menu Mobile
+function gerenciarMenuMobile() {
+    const btnMenu = document.getElementById("btnMenu");
+    const fecharMenu = document.getElementById("fecharMenu");
+    const menu = document.getElementById("menu");
+    const fundoMenu = document.getElementById("fundoMenu");
+
+    if (btnMenu) btnMenu.addEventListener("click", () => { menu.classList.add("ativo"); if(fundoMenu) fundoMenu.classList.add("ativo"); });
+    const fechar = () => { menu.classList.remove("ativo"); if(fundoMenu) fundoMenu.classList.remove("ativo"); };
+    if (fecharMenu) fecharMenu.addEventListener("click", fechar);
+    if (fundoMenu) fundoMenu.addEventListener("click", fechar);
 }

@@ -3,85 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoio Pet - Nova História</title>
-    <link rel="stylesheet" href="./assets/css/novas_historias.css">
+    <title>Apoio Pet - Animais Cadastrados</title>
+    <link rel="stylesheet" href="./assets/css/animais_cadastrados.css">
     <link rel="icon" href="./assets/imgs/logo_guia.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header class="navbar-admin">
         <div class="logo-container">
             <img src="./assets/imgs/Logo.png" alt="Logo Apoio Pet" class="logo-img"> 
         </div>
-
         <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
-        
         <div class="fundo-menu" id="fundoMenu"></div>
-
         <nav class="nav-links" id="menu">
             <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
-            <a href="novas_historias.html" class="active">Novas Histórias</a>
+            <a href="novas_historias.html">Novas Histórias</a>
             <a href="cadastro_animal.html">Cadastrar</a>
-            <a href="animais_cadastrados.html">Animais Cadastrados</a>
+            <a href="animais_cadastrados.html" class="active">Animais Cadastrados</a>
             <a href="login_adm.html">Login</a>
         </nav>
     </header>
 
     <main class="main-container">
-        
         <div class="topo-pagina">
-            <div class="titulo-esquerda">
-                <a href="javascript:history.back()" class="btn-voltar-circulo" aria-label="Voltar">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
-                    </svg>
-                </a>
-                <h1>Nova História</h1>
-            </div>
-            
-            <div class="toggle-container">
-                <span>Todas</span>
-                <label class="switch">
-                    <input type="checkbox" id="toggleTodas">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+            <a href="javascript:history.back()" class="btn-voltar-circulo" aria-label="Voltar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white"/>
+                </svg>
+            </a>
+            <h1>Animais Cadastrados</h1>
         </div>
 
-        <div class="historias-grid" id="grid-historias"></div>
+        <div class="animais-grid" id="grid-animais">
+            <!-- Os cards entrarão aqui pelo JS -->
+            <p style="text-align: center; width: 100%;">Carregando animais do banco...</p>
+        </div>
     </main>
 
     <script src="./assets/script/animais_cadastrados.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const btnMenu = document.getElementById("btnMenu");
-            const fecharMenu = document.getElementById("fecharMenu");
-            const menu = document.getElementById("menu");
-            const fundoMenu = document.getElementById("fundoMenu");
-
-            // Abre o menu
-            if (btnMenu) {
-                btnMenu.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    menu.classList.add("ativo");
-                    fundoMenu.classList.add("ativo");
-                });
-            }
-
-            // Fecha o menu
-            function fecharPainel(e) {
-                e.preventDefault();
-                menu.classList.remove("ativo");
-                fundoMenu.classList.remove("ativo");
-            }
-
-            if (fecharMenu && fundoMenu) {
-                fecharMenu.addEventListener("click", fecharPainel);
-                fundoMenu.addEventListener("click", fecharPainel);
-            }
-        });
-    </script>
 </body>
 </html>
