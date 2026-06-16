@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,38 +7,33 @@
     <link rel="icon" href="./assets/imgs/logo_guia.png">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
-
 <body>
     <div class="top-bar">
         <div class="top-bar-segment--red"></div>
         <div class="top-bar-segment--yellow"></div>
         <div class="top-bar-segment--green"></div>
     </div>
+    
     <header class="cabecalho">
-    <img src="./assets/imgs/logo.png" alt="Apoio Pet" class="logo">
+        <img src="./assets/imgs/logo.png" alt="Apoio Pet" class="logo">
+        <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
+        <div class="fundo-menu" id="fundoMenu"></div>
+        <nav class="menu" id="menu">
+            <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
+            <a href="#">Início</a>
+            <a href="./Sobre_Nos.html">Sobre Nós</a>
+            <a href="./historia_e_impacto.html">Casos</a>
+            <a href="./denuncias.html">Denúncia</a>
+            <a href="#footer">Contato</a>
+            <a href="./doe.html" class="btn-ajuda">Como ajudar</a>
+        </nav>
+    </header>
 
-    <button class="menu-mobile" id="btnMenu" aria-label="Abrir menu">☰</button>
-
-    <div class="fundo-menu" id="fundoMenu"></div>
-
-    <nav class="menu" id="menu">
-        <button class="fechar-menu" id="fecharMenu" aria-label="Fechar menu">×</button>
-
-        <a href="#">Início</a>
-        <a href="./Sobre_Nos.html">Sobre Nós</a>
-        <a href="./historia_e_impacto.html">Casos</a>
-        <a href="./denuncias.html">Denúncia</a>
-        <a href="#footer">Contato</a>
-        <a href="./doe.html" class="btn-ajuda">Como ajudar</a>
-    </nav>
-</header>
     <section id="banner">
         <div class="hero-content">
             <h1>Apoie os animais</h1>
-            <p>Quando abandonamos um animal,
-                deixamos para trás mais do que apenas um animal.
-                Deixamos uma vida para sofrer.</p>
-            <a href="">Veja mais</a>
+            <p>Quando abandonamos um animal, deixamos para trás mais do que apenas um animal. Deixamos uma vida para sofrer.</p>
+            <a href="./Sobre_Nos.html">Veja mais</a>
         </div>
         <div class="hero-media">
             <img src="./assets/imgs/gato-cachorro.png" alt="">
@@ -49,55 +43,44 @@
     <section class="mission">
         <div class="mission-about">
             <h1>Sobre nós</h1>
-            <p>O Apoio Pet é uma iniciativa dedicada ao cuidado, proteção e resgate de animais em situação de rua. Nosso
-                propósito é oferecer uma segunda chance para cães e gatos que foram abandonados, garantindo acolhimento,
-                alimentação, cuidados veterinários e, principalmente, muito amor.</p>
+            <p>O Apoio Pet é uma iniciativa dedicada ao cuidado, proteção e resgate de animais em situação de rua. Nosso propósito é oferecer uma segunda chance para cães e gatos que foram abandonados, garantindo acolhimento, alimentação, cuidados veterinários e, principalmente, muito amor.</p>
             <div class="mission-gallery">
+                <!-- Mantivemos apenas duas imagens (um cachorro e um gato) -->
                 <img src="./assets/imgs/cachorro_maltratado1.jpg" alt="">
                 <img src="./assets/imgs/gato_maltratado1.jpg" alt="">
-                <img src="./assets/imgs/cachorro_maltratado2.jpg" alt="">
             </div>
         </div>
         <div class="mission-details">
             <h1>Objetivo de projeto</h1>
-            <p>O Apoio Pet tem como objetivo resgatar animais em situação de rua, oferecendo cuidados essenciais como
-                alimentação, abrigo e atendimento veterinário. </p>
+            <p>O Apoio Pet tem como objetivo resgatar animais em situação de rua, oferecendo cuidados essenciais como alimentação, abrigo e atendimento veterinário. </p>
             <br>
-            <p>Buscamos promover a recuperação desses animais e encontrar lares responsáveis, onde possam viver com
-                segurança e amor.</p>
+            <p>Buscamos promover a recuperação desses animais e encontrar lares responsáveis, onde possam viver com segurança e amor.</p>
         </div>
     </section>
 
     <section class="rescue-cases">
         <h1>Casos de resgates</h1>
-        <p>Ao longo da nossa trajetória, o Apoio Pet já realizou mais de 350 resgates de animais em situação de rua e
-            abandono. Desses, a maioria foi recuperada com sucesso, recebendo cuidados veterinários, alimentação e
-            abrigo. Mais de 100 animais já foram adotados, encontrando lares responsáveis e cheios de amor. Também
-            atuamos em diversos atendimentos emergenciais, ajudando animais em situações críticas.</p>
+        <p>Ao longo da nossa trajetória, o Apoio Pet já realizou mais de 350 resgates de animais em situação de rua e abandono. Desses, a maioria foi recuperada com sucesso, recebendo cuidados veterinários, alimentação e abrigo. Mais de 100 animais já foram adotados, encontrando lares responsáveis e cheios de amor. Também atuamos em diversos atendimentos emergenciais, ajudando animais em situações críticas.</p>
     </section>
 
-   <div class="slider">
-    <div class="slider-track">
-        <!-- 1º Conjunto de Imagens -->
-        <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado1.jpg" alt="Caso 1"></div>
-        <div class="slider-item"><img src="./assets/imgs/gato_maltratado1.jpg" alt="Caso 2"></div>
-        <div class="slider-item"><img src="./assets/imgs/gato-cachorro.png" alt="Caso 3"></div>
-        <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado2.jpg" alt="Caso 4"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso1.png" alt="Caso 5"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso2.png" alt="Caso 6"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso3.png" alt="Caso 7"></div>
-
-        <!-- 2º Conjunto Duplicado (Essencial para o Loop Perfeito) -->
-        <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado1.jpg" alt="Caso 1 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/gato_maltratado1.jpg" alt="Caso 2 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/gato-cachorro.png" alt="Caso 3 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado2.jpg" alt="Caso 4 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso1.png" alt="Caso 5 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso2.png" alt="Caso 6 Clone"></div>
-        <div class="slider-item"><img src="./assets/imgs/imagem_caso3.png" alt="Caso 7 Clone"></div>
+    <div class="slider">
+        <div class="slider-track">
+            <!-- 1º Conjunto de Imagens -->
+            <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado1.jpg" alt="Caso 1"></div>
+            <div class="slider-item"><img src="./assets/imgs/gato_maltratado1.jpg" alt="Caso 2"></div>
+            <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado2.jpg" alt="Caso 4"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso1.png" alt="Caso 5"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso2.png" alt="Caso 6"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso3.png" alt="Caso 7"></div>
+            <!-- 2º Conjunto Duplicado -->
+            <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado1.jpg" alt="Caso 1 Clone"></div>
+            <div class="slider-item"><img src="./assets/imgs/gato_maltratado1.jpg" alt="Caso 2 Clone"></div>
+            <div class="slider-item"><img src="./assets/imgs/cachorro_maltratado2.jpg" alt="Caso 4 Clone"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso1.png" alt="Caso 5 Clone"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso2.png" alt="Caso 6 Clone"></div>
+            <div class="slider-item"><img src="./assets/imgs/imagem_caso3.png" alt="Caso 7 Clone"></div>
+        </div>
     </div>
-</div>
-
 
     <section class="adoption">
         <div class="adoption-image-container">
@@ -105,10 +88,7 @@
         </div>
         <div class="adoption-content">
             <h1>Adote um animalzinho</h1>
-            <p>Adotar é um ato de amor que transforma vidas. Ao escolher adotar, você oferece uma nova chance a um
-                animal que já passou por abandono, garantindo um lar cheio de carinho, cuidado e segurança.
-                Ao adotar, você não só ganha um amigo fiel, mas também ajuda a abrir espaço para que outros animais
-                possam ser resgatados.</p>
+            <p>Adotar é um ato de amor que transforma vidas. Ao escolher adotar, você oferece uma nova chance a um animal que já passou por abandono, garantindo um lar cheio de carinho, cuidado e segurança. Ao adotar, você não só ganha um amigo fiel, mas também ajuda a abrir espaço para que outros animais possam ser resgatados.</p>
             <div class="adoption-cta-wrapper">
                 <a href="">Adote!</a>
             </div>
@@ -116,12 +96,9 @@
     </section>
 
     <footer id="footer" class="rodape">
-
         <div class="rodape-grid">
-
             <div class="rodape-coluna">
                 <h3>Onde estamos</h3>
-
                 <div class="mapa">
                     <iframe 
                         src="https://www.google.com/maps?q=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510&output=embed"
@@ -130,67 +107,51 @@
                     </iframe>
                 </div>
             </div>
-
             <div class="rodape-coluna">
                 <h3>Fale conosco</h3>
-
                 <a href="tel:08000481212" class="rodape-botao">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/Telefone.png" alt="Telefone">
                     0800-048-1212
                 </a>
-
                 <a href="https://wa.me/554832314000" class="rodape-botao">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/whatsapp.png" alt="WhatsApp">
                     (48) 3231-4000
                 </a>
-
                 <a href="https://www.google.com/maps/search/?api=1&query=R.%20Arno%20Waldemar%20D%C3%B6hler,%20957%20-%20Zona%20Industrial%20Norte,%20Joinville%20-%20SC,%2089219-510" class="rodape-botao" target="_blank">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/Localização.png" alt="Localização">
                     R. Arno Waldemar Döhler, 957 - Zona Industrial Norte, Joinville - SC, 89219-510
                 </a>
-
                 <a href="mailto:faleconosco@fiesc.com.br" class="rodape-botao">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/Email.png" alt="Email">
                     faleconosco@fiesc.com.br
                 </a>
             </div>
-
             <div class="rodape-coluna ajuda">
                 <h3>Como ajudar</h3>
-
                 <a href="./doe.html" class="rodape-botao">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/Pix.png" alt="Pix">
                     Pix
                 </a>
-
                 <a href="./formulario.html" class="rodape-botao">
                     <img src="./assets/imgs/Sobre_Nos_Imagem/Pessoa.png" alt="Pessoa">
                     Seja voluntario
                 </a>
-
                 <div class="redes">
                     <h3>Siga-nos</h3>
-
                     <a href="#" aria-label="Instagram">
                         <img src="./assets/imgs/Sobre_Nos_Imagem/Instagram.png" alt="Instagram">
                     </a>
-
                     <a href="#" aria-label="Facebook">
                         <img src="./assets/imgs/Sobre_Nos_Imagem/Facebook.png" alt="Facebook">
                     </a>
-
                     <a href="#" aria-label="Linkedin">
                         <img src="./assets/imgs/Sobre_Nos_Imagem/Linkedin.png" alt="Linkedin">
                     </a>
                 </div>
             </div>
-
         </div>
-
         <div class="linha-rodape"></div>
-
         <p class="copy">© 2026 Apoio Pet. Todos os direitos reservados.</p>
-
     </footer>
 
     <script>
@@ -214,11 +175,9 @@
         fundoMenu.addEventListener("click", fecharMenuLateral);
 
         const linksMenu = document.querySelectorAll(".menu a");
-
         linksMenu.forEach(function (link) {
             link.addEventListener("click", fecharMenuLateral);
         });
     </script>
 </body>
-
 </html>

@@ -1,944 +1,983 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-body {
-    background-color: #F1E9D2;
-}
-
-/* ── TOP BAR ── */
-.top-bar {
-    width: 100%;
-    height: 2vh;
-    display: flex;
-}
-
-.top-bar-segment--red {
-    background-color: #BB230B;
-    width: 33.33vw;
-}
-
-.top-bar-segment--yellow {
-    background-color: #EDCB4D;
-    width: 33.33vw;
-}
-
-.top-bar-segment--green {
-    background-color: #478A00;
-    width: 33.33vw;
-}
-
-/* ── HEADER ── */
-.cabecalho {
-    height: 118px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    width: 210px;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 38px;
-}
-
-.menu a {
-    color: #694329;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.btn-ajuda {
-    background: #d5d5d5;
-    padding: 2px 22px;
-    border-radius: 20px;
-    color: #555 !important;
-}
-
-.menu-mobile,
-.fechar-menu,
-.fundo-menu {
-    display: none;
-}
-
-/* ── BANNER ── */
-#banner {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #95C547;
-    min-height: 70vh;
-    margin-top: 10px;
-    padding: 20px 40px;
-}
-
-#banner .hero-content {
-    width: 50%;
-    text-align: start;
-}
-
-#banner .hero-content h1 {
-    color: white;
-    font-family: 'Poppins';
-    font-size: 80px;
-    line-height: 90px;
-    margin-top: 10px;
-}
-
-#banner .hero-content p {
-    font-size: 20px;
-    color: #fafaef;
-    margin: 40px 0;
-}
-
-#banner .hero-content a {
-    text-decoration: none;
-    color: #494848;
-    padding: 10px 80px;
-    opacity: 70%;
-    background-color: #E0E0E0;
-    border-radius: 45px;
-}
-
-#banner .hero-content a:hover {
-    color: #ffffff;
-    background-color: #a7a7a7;
-    opacity: 80%;
-}
-
-#banner .hero-media {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-#banner .hero-media img {
-    width: 500px;
-    max-width: 45vw;
-    margin-top: 65px;
-    position: relative;
-    top: 160px;
-    width: 550px;
-    position: relative;
-    top: 175px;
-}
-
-/* ── MISSION ── */
-.mission {
-    margin-top: 150px;
-    display: flex;
-    background-color: #17366D;
-    color: white;
-    min-height: 400px;
-}
-
-.mission-about {
-    margin-top: -50px;
-    background-color: #EBC848;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-}
-
-.mission-about h1 {
-    font-size: 48px;
-}
-
-.mission-gallery {
-    display: flex;
-    gap: 20px;
-    margin-top: 50px;
-    width: 100%;
-    justify-content: center;
-}
-
-.mission-gallery img {
-    width: 20vw;
-    object-fit: cover;
-}
-
-.mission-details {
-    padding: 20px;
-    min-width: 240px;
-    max-width: 380px;
-}
-
-/* ── RESCUE CASES ── */
-.rescue-cases {
-    margin-top: 50px;
-    padding: 20px 10px 20px 20px;
-    font-size: 22px;
-}
-
-.rescue-cases h1 {
-    font-size: 32px;
-}
-
-/* ── SLIDER OTIMIZADO ── */
-.slider {
-    width: 100%;
-    max-width: 100vw;
-    margin: 40px auto;
-    overflow: hidden;
-    position: relative;
-    padding: 30px 0; /* Espaço extra para a sombra não ser cortada */
-}
-
-/* Efeito de desvanecimento (fade) nas bordas do carrossel */
-.slider::before,
-.slider::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-.slider::before {
-    left: 0;
-    background: linear-gradient(to right, #F1E9D2, transparent); /* Usa a cor de fundo do seu body */
-}
-.slider::after {
-    right: 0;
-    background: linear-gradient(to left, #F1E9D2, transparent);
-}
-
-.slider-track {
-    display: flex;
-    gap: 20px; /* Espaçamento limpo entre as imagens */
-    width: max-content; /* Permite que o track expanda conforme o conteúdo */
-    animation: scrollSeamless 30s linear infinite; /* Movimento mais suave */
-}
-
-.slider-item {
-    flex-shrink: 0;
-    width: 320px; /* Largura padronizada para as imagens */
-}
-
-.slider-item img {
-    width: 100%;
-    height: 400px;
-    display: block;
-    object-fit: cover;
-    border-radius: 16px; /* Bordas arredondadas e modernas */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* Sombra elegante */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Efeito de "pulo" e destaque ao passar o mouse */
-.slider-item:hover img {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-}
-
-.slider:hover .slider-track {
-    animation-play-state: paused;
-}
-
-/* Animação que desloca exatamente metade do track e reinicia */
-@keyframes scrollSeamless {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        /* Desloca 50% do total (referente aos 7 primeiros itens) + a compensação do gap */
-        transform: translateX(calc(-50% - 10px)); 
-    }
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins';
     }
 
-    100% {
-        transform: translateX(calc(-33.33% * 6));
+    body {
+        background-color: #F1E9D2;
     }
-}
 
-.slider:hover .slider-track {
-    animation-play-state: paused;
-}
+    /* ── TOP BAR ── */
+    .top-bar {
+        width: 100%;
+        height: 2vh;
+        display: flex;
+    }
 
-/* ── ADOPTION ── */
-.adoption {
-    margin-top: 150px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    background-color: #CD3A23F2;
-    min-height: 70vh;
-}
+    .top-bar-segment--red {
+        background-color: #BB230B;
+        width: 33.33vw;
+    }
 
-.adoption-image-container {
-    margin-top: -50px;
-    flex-shrink: 0;
-}
+    .top-bar-segment--yellow {
+        background-color: #EDCB4D;
+        width: 33.33vw;
+    }
 
-.adoption-image-container img {
-    width: 40vw;
-    max-height: 80vh;
-    object-fit: cover;
-}
+    .top-bar-segment--green {
+        background-color: #478A00;
+        width: 33.33vw;
+    }
 
-.adoption-content {
-    padding: 30px;
-    color: white;
-}
-
-.adoption-content h1 {
-    margin-bottom: 10px;
-}
-
-.adoption-content p {
-    font-size: 20px;
-}
-
-.adoption-cta-wrapper {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.adoption-cta-wrapper a {
-    text-decoration: none;
-    color: #494848;
-    font-weight: 600;
-    background-color: #D9D9D9;
-    padding: 5px 20px;
-    border-radius: 20px;
-    opacity: 90%;
-}
-
-.adoption-cta-wrapper a:hover {
-    background-color: #a7a7a7;
-}
-
-/* ── FOOTER ── */
-.rodape {
-    background: #634c35;
-    color: white;
-    padding: 62px 48px 18px;
-}
-
-.rodape-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 1fr .8fr;
-    gap: 80px;
-}
-
-.rodape h3 {
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 22px;
-}
-
-.mapa {
-    width: 100%;
-    max-width: 435px;
-    height: 282px;
-    overflow: hidden;
-}
-
-.mapa iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.rodape-botao {
-    font-size: 11px;
-    margin-bottom: 13px;
-    line-height: 1.3;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    text-decoration: none;
-}
-
-.rodape-botao img {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-}
-
-.redes {
-    margin-top: 190px;
-    text-align: center;
-}
-
-.redes h3 {
-    font-size: 24px;
-}
-
-.redes a {
-    text-decoration: none;
-}
-
-.redes img {
-    width: 25px;
-    height: 25px;
-    margin: 0 15px;
-}
-
-.linha-rodape {
-    width: 100%;
-    height: 1px;
-    background: #9a8b77;
-    margin-top: 38px;
-}
-
-.copy {
-    text-align: center;
-    font-size: 8px;
-    margin-top: 16px;
-}
-
-/* ═══════════════════════════════════════════
-   RESPONSIVO — tablet  (701px – 1024px)
-═══════════════════════════════════════════ */
-@media (min-width: 701px) and (max-width: 1024px) {
-
-    /* ── Header ── */
+    /* ── HEADER ── */
     .cabecalho {
-        height: 90px;
-        padding: 0 28px;
+        height: 118px;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .logo {
-        width: 170px;
+        width: 210px;
     }
 
     .menu {
-        gap: 22px;
+        display: flex;
+        align-items: center;
+        gap: 38px;
     }
 
     .menu a {
-        font-size: 15px;
+        color: #694329;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
     }
 
     .btn-ajuda {
-        padding: 2px 16px;
+        background: #d5d5d5;
+        padding: 2px 22px;
+        border-radius: 20px;
+        color: #555 !important;
     }
 
-    /* ── Banner ── */
-    #banner {
-        padding: 20px 28px;
-        min-height: 60vh;
-        gap: 10px;
-    }
-
-    #banner .hero-content h1 {
-        font-size: 52px;
-        line-height: 60px;
-    }
-
-    #banner .hero-content p {
-        font-size: 16px;
-        margin: 24px 0;
-    }
-
-    #banner .hero-content a {
-        padding: 10px 50px;
-    }
-
-    #banner .hero-media img {
-        width: 380px;
-        max-width: 42vw;
-        top: 100px;
-    }
-
-    /* ── Mission ── */
-    .mission {
-        margin-top: 110px;
-    }
-
-    .mission-about {
-        margin-top: -40px;
-        margin-left: 14px;
-        margin-right: 14px;
-        padding: 16px;
-    }
-
-    .mission-about h1 {
-        font-size: 34px;
-    }
-
-    .mission-about p {
-        font-size: 14px;
-    }
-
-    .mission-gallery {
-        gap: 12px;
-        margin-top: 30px;
-    }
-
-    .mission-gallery img {
-        width: 22vw;
-    }
-
-    .mission-details {
-        min-width: 200px;
-        max-width: 300px;
-        padding: 16px;
-        font-size: 14px;
-    }
-
-    /* ── Rescue cases ── */
-    .rescue-cases {
-        font-size: 18px;
-        padding: 20px 28px;
-        margin-top: 36px;
-    }
-
-    .rescue-cases h1 {
-        font-size: 26px;
-        margin-bottom: 8px;
-    }
-
-    /* ── Slider ── */
-    .slider-item img {
-        height: 220px;
-    }
-
-    /* ── Adoption ── */
-    .adoption {
-        margin-top: 110px;
-        padding: 0 14px;
-        min-height: 60vh;
-    }
-
-    .adoption-image-container {
-        margin-top: -40px;
-    }
-
-    .adoption-image-container img {
-        width: 42vw;
-        max-height: 70vh;
-    }
-
-    .adoption-content {
-        padding: 22px;
-    }
-
-    .adoption-content h1 {
-        font-size: 28px;
-    }
-
-    .adoption-content p {
-        font-size: 16px;
-    }
-
-    /* ── Footer ── */
-    .rodape {
-        padding: 44px 28px 16px;
-    }
-
-    .rodape-grid {
-        grid-template-columns: 1.1fr 1fr 0.8fr;
-        gap: 36px;
-    }
-
-    .rodape h3 {
-        font-size: 18px;
-        margin-bottom: 16px;
-    }
-
-    .mapa {
-        height: 210px;
-    }
-
-    .rodape-botao {
-        font-size: 11px;
-    }
-
-    .redes {
-        margin-top: 80px;
-    }
-
-    .redes h3 {
-        font-size: 18px;
-    }
-
-    .redes img {
-        width: 22px;
-        height: 22px;
-        margin: 0 10px;
-    }
-}
-@media (max-width: 1024px) {
-    #banner .hero-content h1 {
-        font-size: 58px;
-        line-height: 66px;
-    }
-
-    #banner .hero-media img {
-        width: 450px;
-        max-width: 45vw;
-        position: relative;
-        top: 100px;
-
-    }
-
-    .mission-about h1 {
-        font-size: 36px;
-    }
-
-    .mission-gallery img {
-        width: 25vw;
-    }
-
-    .adoption-image-container img {
-        width: 44vw;
-    }
-
-    .rodape-grid {
-        gap: 36px;
-    }
-
-    .redes {
-        margin-top: 80px;
-    }
-}
-
-/* ═══════════════════════════════════════════
-   RESPONSIVO — mobile  (≤ 900px)
-═══════════════════════════════════════════ */
-@media (max-width: 900px) {
-
-    /* ── Header ── */
-    .cabecalho {
-        height: 60px;
-        padding: 0 18px;
-    }
-
-    .logo {
-        width: 125px;
-    }
-
-    .menu-mobile {
-        display: block;
-        font-size: 34px;
-        background: none;
-        border: none;
-        color: #694329;
-        cursor: pointer;
-    }
-
+    .menu-mobile,
+    .fechar-menu,
     .fundo-menu {
         display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(0, 0, 0, .45);
-        z-index: 99;
     }
 
-    .fundo-menu.ativo {
-        display: block;
-    }
-
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -270px;
-        width: 270px;
-        height: 100vh;
-        background: #fff8e8;
-        padding: 70px 25px 25px;
-        z-index: 100;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 22px;
-        transition: .3s;
-    }
-
-    .menu.ativo {
-        right: 0;
-    }
-
-    .fechar-menu {
-        display: block;
-        position: absolute;
-        top: 18px;
-        right: 22px;
-        border: 0;
-        background: none;
-        font-size: 35px;
-        color: #694329;
-        cursor: pointer;
-    }
-
-    /* ── Banner ── */
+    /* ── BANNER ── */
     #banner {
-        flex-direction: column;
-        min-height: auto;
-        padding: 40px 24px 32px;
-        text-align: center;
-        gap: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #95C547;
+        min-height: 70vh;
+        margin-top: 10px;
+        padding: 20px 40px;
     }
 
     #banner .hero-content {
-        width: 100%;
-        text-align: center;
+        width: 50%;
+        text-align: start;
     }
 
     #banner .hero-content h1 {
-        font-size: 40px;
-        line-height: 48px;
-        margin-top: 0;
+        color: white;
+        font-family: 'Poppins';
+        font-size: 80px;
+        line-height: 90px;
+        margin-top: 10px;
     }
 
     #banner .hero-content p {
-        font-size: 16px;
-        margin: 20px 0 28px;
+        font-size: 20px;
+        color: #fafaef;
+        margin: 40px 0;
     }
 
     #banner .hero-content a {
-        padding: 10px 50px;
+        text-decoration: none;
+        color: #494848;
+        padding: 10px 80px;
+        opacity: 70%;
+        background-color: #E0E0E0;
+        border-radius: 45px;
+    }
+
+    #banner .hero-content a:hover {
+        color: #ffffff;
+        background-color: #a7a7a7;
+        opacity: 80%;
     }
 
     #banner .hero-media {
-        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
     }
 
     #banner .hero-media img {
-        width: 80%;
-        max-width: 320px;
-        margin-top: 0;
-        top: 0;
-        position: static;
+        width: 500px;
+        max-width: 45vw;
+        margin-top: 65px;
         position: relative;
-        top: 50px;
+        top: 160px;
+        width: 550px;
+        position: relative;
+        top: 175px;
     }
 
-    /* ── Mission ── */
+    /* ── MISSION ── */
     .mission {
-        flex-direction: column;
-        margin-top: 50px;
-        min-height: auto;
+        margin-top: 150px;
+        display: flex;
+        background-color: #17366D;
+        color: white;
+        min-height: 400px;
     }
 
     .mission-about {
-        margin-top: 0;
-        margin-left: 0;
-        margin-right: 0;
-        width: 100%;
-        padding: 24px 16px;
+        margin-top: -50px;
+        background-color: #EBC848;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 20px;
     }
 
     .mission-about h1 {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .mission-about p {
-        font-size: 14px;
-        text-align: center;
+        font-size: 48px;
     }
 
     .mission-gallery {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        margin-top: 50px;
+        width: 100%;
+        justify-content: center;
     }
 
     .mission-gallery img {
-        width: 90%;
-        max-width: 400px;
+        width: 30vw;
+        max-width: 300px;
+        object-fit: cover;
     }
+
 
     .mission-details {
-        max-width: 100%;
-        padding: 24px 20px;
-        font-size: 14px;
+        padding: 20px;
+        min-width: 240px;
+        max-width: 380px;
     }
 
-    /* ── Rescue cases ── */
+    /* ── RESCUE CASES ── */
     .rescue-cases {
-        font-size: 15px;
-        padding: 20px 20px;
-        margin-top: 30px;
+        margin-top: 50px;
+        padding: 20px 10px 20px 20px;
+        font-size: 22px;
     }
 
     .rescue-cases h1 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 32px;
     }
 
-    /* ── Slider ── */
+    /* ── SLIDER / CASOS DE RESGATE ── */
+
+    .slider {
+        width: 100%;
+        max-width: 100vw;
+        margin: 40px auto 80px;
+        overflow: hidden;
+        position: relative;
+        padding: 30px 0;
+    }
+
+    .slider::before,
+    .slider::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 80px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .slider::before {
+        left: 0;
+        background: linear-gradient(to right, #F1E9D2, transparent);
+    }
+
+    .slider::after {
+        right: 0;
+        background: linear-gradient(to left, #F1E9D2, transparent);
+    }
+
+    .slider-track {
+        display: flex;
+        gap: 28px;
+        width: max-content;
+        animation: sliderLoop 32s linear infinite;
+    }
+
     .slider-item {
-        flex: 0 0 50%;
+        flex: 0 0 auto;
+        width: 390px;
+        height: 250px;
+        overflow: hidden;
+        background: #ddd;
     }
 
     .slider-item img {
         width: 100%;
-        height: 180px;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        filter: grayscale(100%);
+        transition: transform 0.45s ease, filter 0.45s ease;
     }
 
-    /* ── Adoption ── */
+    .slider-item:hover img {
+        transform: scale(1.08);
+        filter: grayscale(0%);
+    }
+
+    @keyframes sliderLoop {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-50% - 14px));
+        }
+    }
+
+
+    /* ── ADOPTION ── */
     .adoption {
-        flex-direction: column;
-        min-height: auto;
-        margin-top: 50px;
-        padding: 0;
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        background-color: #CD3A23F2;
+        min-height: 70vh;
     }
 
     .adoption-image-container {
-        margin-top: 0;
-        width: 100%;
+        margin-top: -50px;
+        flex-shrink: 0;
     }
 
     .adoption-image-container img {
-        width: 100%;
-        max-height: 280px;
+        width: 40vw;
+        max-height: 80vh;
         object-fit: cover;
     }
 
     .adoption-content {
-        padding: 24px 20px 32px;
+        padding: 30px;
+        color: white;
     }
 
     .adoption-content h1 {
-        font-size: 26px;
-    }
-
-    .adoption-content p {
-        font-size: 16px;
-    }
-
-    .adoption-cta-wrapper {
-        width: 100%;
-    }
-
-    /* ── Footer ── */
-    .rodape {
-        padding: 32px 18px 14px;
-    }
-
-    .rodape-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .rodape h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-    .mapa {
-        height: 160px;
-    }
-
-    .rodape-botao {
-        font-size: 12px;
-        gap: 8px;
         margin-bottom: 10px;
     }
 
-    .rodape-botao img {
-        width: 16px;
-        height: 16px;
-    }
-
-    .redes {
-        margin-top: 8px;
-        text-align: left;
-    }
-
-    .redes h3 {
-        font-size: 16px;
-    }
-
-    .redes img {
-        width: 22px;
-        height: 22px;
-        margin: 0 8px 0 0;
-    }
-
-    .linha-rodape {
-        margin-top: 24px;
-    }
-
-    .copy {
-        font-size: 8px;
-        margin-top: 10px;
-
-    .redes h3 {
-        font-size: 16px;
-    }
-
-    .redes img {
-        width: 22px;
-        height: 22px;
-        margin: 0 8px 0 0;
-    }
-
-    .linha-rodape {
-        margin-top: 24px;
-    }
-
-    .copy {
-        font-size: 8px;
-        margin-top: 10px;
-    }
-}
-}
-
-/* ═══════════════════════════════════════════
-   RESPONSIVO — pequeno  (≤ 480px)
-═══════════════════════════════════════════ */
-@media (max-width: 480px) {
-    #banner .hero-content h1 {
-        font-size: 32px;
-        line-height: 38px;
-    }
-
-    #banner .hero-content p {
-        font-size: 14px;
-    }
-
-    .mission-about h1 {
-        font-size: 22px;
-    }
-
-    .adoption-content h1 {
-        font-size: 22px;
-    }
-
     .adoption-content p {
-        font-size: 14px;
-    }
-
-    .rescue-cases {
-        font-size: 13px;
-    }
-
-    .rescue-cases h1 {
         font-size: 20px;
     }
 
-    #banner .hero-media img {
-        width: 90%;
-        max-width: 260px;
-        top: 30px;
+    .adoption-cta-wrapper {
+        text-align: center;
+        margin-top: 30px;
     }
-}
+
+    .adoption-cta-wrapper a {
+        text-decoration: none;
+        color: #494848;
+        font-weight: 600;
+        background-color: #D9D9D9;
+        padding: 5px 20px;
+        border-radius: 20px;
+        opacity: 90%;
+    }
+
+    .adoption-cta-wrapper a:hover {
+        background-color: #a7a7a7;
+    }
+
+    /* ── FOOTER ── */
+    .rodape {
+        background: #634c35;
+        color: white;
+        padding: 62px 48px 18px;
+    }
+
+    .rodape-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr .8fr;
+        gap: 80px;
+    }
+
+    .rodape h3 {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 22px;
+    }
+
+    .mapa {
+        width: 100%;
+        max-width: 435px;
+        height: 282px;
+        overflow: hidden;
+    }
+
+    .mapa iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    .rodape-botao {
+        font-size: 11px;
+        margin-bottom: 13px;
+        line-height: 1.3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .rodape-botao img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+    }
+
+    .redes {
+        margin-top: 190px;
+        text-align: center;
+    }
+
+    .redes h3 {
+        font-size: 24px;
+    }
+
+    .redes a {
+        text-decoration: none;
+    }
+
+    .redes img {
+        width: 25px;
+        height: 25px;
+        margin: 0 15px;
+    }
+
+    .linha-rodape {
+        width: 100%;
+        height: 1px;
+        background: #9a8b77;
+        margin-top: 38px;
+    }
+
+    .copy {
+        text-align: center;
+        font-size: 8px;
+        margin-top: 16px;
+    }
+
+    /* ═══════════════════════════════════════════
+    RESPONSIVO — tablet  (701px – 1024px)
+    ═══════════════════════════════════════════ */
+    @media (min-width: 701px) and (max-width: 1024px) {
+
+        /* ── Header ── */
+        .cabecalho {
+            height: 90px;
+            padding: 0 28px;
+        }
+
+        .logo {
+            width: 170px;
+        }
+
+        .menu {
+            gap: 22px;
+        }
+
+        .menu a {
+            font-size: 15px;
+        }
+
+        .btn-ajuda {
+            padding: 2px 16px;
+        }
+
+        /* ── Banner Ajustado ── */
+        #banner {
+            padding: 15px 28px;
+            /* Reduzido o padding vertical de 20px para 15px */
+            height: 50vh;
+            /* Reduzido de 60vh para 45vh */
+            gap: 10px;
+        }
+
+        #banner .hero-content h1 {
+            font-size: 44px;
+            /* Reduzido um pouco mais de 52px para 44px */
+            line-height: 50px;
+        }
+
+        #banner .hero-content p {
+            font-size: 15px;
+            margin: 16px 0;
+            /* Diminuído o espaçamento entre o texto e o botão */
+        }
+
+        #banner .hero-content a {
+            padding: 8px 40px;
+            /* Botão ligeiramente menor */
+        }
+
+        #banner .hero-media img {
+            width: 80%;
+            max-width: 42vw;
+            position: relative;
+            /* Garante o posicionamento */
+            top: 120px;
+            /* Aumente este valor para descer mais (antes era 100px) */
+        }
+
+        /* ── Mission ── */
+        .mission {
+            margin-top: 110px;
+        }
+
+        .mission-about {
+            margin-top: -40px;
+            margin-left: 14px;
+            margin-right: 14px;
+            padding: 16px;
+        }
+
+        .mission-about h1 {
+            font-size: 34px;
+        }
+
+        .mission-about p {
+            font-size: 14px;
+        }
+
+        .mission-gallery {
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .mission-gallery img {
+            width: 35vw;
+            /* Aumenta o tamanho delas no tablet para não sobrar muito espaço vazio */
+        }
+
+
+        .mission-details {
+            min-width: 200px;
+            max-width: 300px;
+            padding: 16px;
+            font-size: 14px;
+        }
+
+        /* ── Rescue cases ── */
+        .rescue-cases {
+            font-size: 18px;
+            padding: 20px 28px;
+            margin-top: 36px;
+        }
+
+        .rescue-cases h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        /* ── Slider ── */
+        .slider-item img {
+            height: 220px;
+        }
+
+        /* ── Adoption ── */
+        .adoption {
+            margin-top: 110px;
+            padding: 0 14px;
+            min-height: 60vh;
+        }
+
+        .adoption-image-container {
+            margin-top: -40px;
+        }
+
+        .adoption-image-container img {
+            width: 42vw;
+            max-height: 70vh;
+        }
+
+        .adoption-content {
+            padding: 22px;
+        }
+
+        .adoption-content h1 {
+            font-size: 28px;
+        }
+
+        .adoption-content p {
+            font-size: 16px;
+        }
+
+        /* ── Footer ── */
+        .rodape {
+            padding: 44px 28px 16px;
+        }
+
+        .rodape-grid {
+            grid-template-columns: 1.1fr 1fr 0.8fr;
+            gap: 36px;
+        }
+
+        .rodape h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .mapa {
+            height: 210px;
+        }
+
+        .rodape-botao {
+            font-size: 11px;
+        }
+
+        .redes {
+            margin-top: 80px;
+        }
+
+        .redes h3 {
+            font-size: 18px;
+        }
+
+        .redes img {
+            width: 22px;
+            height: 22px;
+            margin: 0 10px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        #banner .hero-content h1 {
+            font-size: 58px;
+            line-height: 66px;
+        }
+
+        #banner .hero-media img {
+            width: 380px;
+            max-width: 42vw;
+            position: relative;
+            /* Garante o posicionamento */
+            top: 60px;
+            /* Aumente este valor para descer mais (antes era 100px) */
+        }
+
+        .mission-about h1 {
+            font-size: 36px;
+        }
+
+        .mission-gallery img {
+            width: 25vw;
+        }
+
+        .adoption-image-container img {
+            width: 44vw;
+        }
+
+        .rodape-grid {
+            gap: 36px;
+        }
+
+        .redes {
+            margin-top: 80px;
+        }
+    }
+
+    /* ═══════════════════════════════════════════
+    RESPONSIVO — mobile  (≤ 900px)
+    ═══════════════════════════════════════════ */
+    @media (max-width: 900px) {
+
+        /* ── Header ── */
+        .cabecalho {
+            height: 60px;
+            padding: 0 18px;
+        }
+
+        .logo {
+            width: 125px;
+        }
+
+        .menu-mobile {
+            display: block;
+            font-size: 34px;
+            background: none;
+            border: none;
+            color: #694329;
+            cursor: pointer;
+        }
+
+        .fundo-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .45);
+            z-index: 99;
+        }
+
+        .fundo-menu.ativo {
+            display: block;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            right: -270px;
+            width: 270px;
+            height: 100vh;
+            background: #fff8e8;
+            padding: 70px 25px 25px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 22px;
+            transition: .3s;
+        }
+
+        .menu.ativo {
+            right: 0;
+        }
+
+        .fechar-menu {
+            display: block;
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            border: 0;
+            background: none;
+            font-size: 35px;
+            color: #694329;
+            cursor: pointer;
+        }
+
+        /* ── Banner ── */
+        /* ── Banner Ajustado ── */
+        #banner {
+            flex-direction: column;
+            height: 60vh;
+            padding: 24px 20px 20px;
+            /* Reduzido de (40px 24px 32px) para (24px 20px 20px) */
+            text-align: center;
+            gap: 15px;
+        }
+
+        #banner .hero-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        #banner .hero-content h1 {
+            font-size: 36px;
+            /* Reduzido de 40px para 36px */
+            line-height: 42px;
+            margin-top: 0;
+        }
+
+        #banner .hero-content p {
+            font-size: 20px;
+            margin: 14px 0 20px;
+            /* Reduzido as margens do texto para encurtar a seção */
+        }
+
+        #banner .hero-content a {
+            padding: 8px 40px;
+        }
+
+        #banner .hero-media {
+            margin-top: 5px;
+        }
+
+
+        #banner .hero-media img {
+            width: 80%;
+            max-width: 400px;
+            position: relative;
+            /* Garante que o top funcione nesta resolução */
+            top: -50px;
+            /* Aumente aqui para descer a imagem (antes estava em 50px) */
+        }
+
+
+        /* ── Mission ── */
+        .mission {
+            flex-direction: column;
+            margin-top: 50px;
+            min-height: auto;
+        }
+
+        .mission-about {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+            padding: 24px 16px;
+        }
+
+        .mission-about h1 {
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .mission-about p {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .mission-gallery {
+            display: flex;
+            flex-direction: row;
+            /* Força ficar uma do lado da outra */
+            justify-content: center;
+            gap: 10px;
+            /* Espaço entre as duas imagens */
+            margin-top: 20px;
+        }
+
+        .mission-gallery img {
+            width: 48%;
+            /* Divide o espaço para que caibam duas imagens de forma igual */
+            max-width: 250px;
+        }
+
+
+        .mission-details {
+            max-width: 100%;
+            padding: 24px 20px;
+            font-size: 14px;
+        }
+
+        /* ── Rescue cases ── */
+        .rescue-cases {
+            font-size: 15px;
+            padding: 20px 20px;
+            margin-top: 30px;
+        }
+
+        .rescue-cases h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .slider {
+            margin: 20px auto 52px;
+            padding: 14px 0 26px;
+        }
+
+        .slider-track {
+            gap: 16px;
+            animation-duration: 28s;
+        }
+
+        .slider-item {
+            width: 260px;
+            height: 170px;
+        }
+
+        .slider::before,
+        .slider::after {
+            width: 45px;
+        }
+
+        /* ── Adoption ── */
+        .adoption {
+            flex-direction: column;
+            min-height: auto;
+            margin-top: 50px;
+            padding: 0;
+        }
+
+        .adoption-image-container {
+            margin-top: 0;
+            width: 100%;
+        }
+
+        .adoption-image-container img {
+            width: 100%;
+            max-height: 280px;
+            object-fit: cover;
+        }
+
+        .adoption-content {
+            padding: 24px 20px 32px;
+        }
+
+        .adoption-content h1 {
+            font-size: 26px;
+        }
+
+        .adoption-content p {
+            font-size: 16px;
+        }
+
+        .adoption-cta-wrapper {
+            width: 100%;
+        }
+
+        /* ── Footer ── */
+        .rodape {
+            padding: 32px 18px 14px;
+        }
+
+        .rodape-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .rodape h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .mapa {
+            height: 160px;
+        }
+
+        .rodape-botao {
+            font-size: 12px;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .rodape-botao img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .redes {
+            margin-top: 8px;
+            text-align: left;
+        }
+
+        .redes h3 {
+            font-size: 16px;
+        }
+
+        .redes img {
+            width: 22px;
+            height: 22px;
+            margin: 0 8px 0 0;
+        }
+
+        .linha-rodape {
+            margin-top: 24px;
+        }
+
+        .copy {
+            font-size: 8px;
+            margin-top: 10px;
+
+            .redes h3 {
+                font-size: 16px;
+            }
+
+            .redes img {
+                width: 22px;
+                height: 22px;
+                margin: 0 8px 0 0;
+            }
+
+            .linha-rodape {
+                margin-top: 24px;
+            }
+
+            .copy {
+                font-size: 8px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    /* ═══════════════════════════════════════════
+    RESPONSIVO — pequeno  (≤ 480px)
+    ═══════════════════════════════════════════ */
+    @media (max-width: 480px) {
+
+        /* ── Banner Ajustado ── */
+        #banner {
+            padding: 20px 16px 15px;
+            height: 60vh;
+        }
+
+        #banner .hero-content h1 {
+            font-size: 28px;
+            /* Reduzido de 32px para 28px */
+            line-height: 34px;
+        }
+
+        #banner .hero-content p {
+            font-size: 13px;
+            margin: 10px 0 16px;
+        }
+
+        .mission-about h1 {
+            font-size: 22px;
+        }
+
+        .adoption-content h1 {
+            font-size: 22px;
+        }
+
+        .adoption-content p {
+            font-size: 14px;
+        }
+
+        .rescue-cases {
+            font-size: 13px;
+        }
+
+        .rescue-cases h1 {
+            font-size: 20px;
+        }
+
+        #banner .hero-media img {
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            top: -20px;
+            /* Ajuste fino para telas pequenas (antes estava em 30px) */
+        }
+    }
+
+    @media(max-width: 400px){
+        #banner .hero-media img{
+             width: 90%;
+            max-width: 300px;
+            position: relative;
+            top: -45px;
+        }
+    }

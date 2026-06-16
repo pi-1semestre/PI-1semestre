@@ -21,14 +21,17 @@ body {
   height: 2vh;
   display: flex;
 }
+
 .top-bar-segment--red {
   background-color: #17366d;
   width: 33.33%;
 }
+
 .top-bar-segment--yellow {
   background-color: #478a00;
   width: 33.33%;
 }
+
 .top-bar-segment--green {
   background-color: #edcb4d;
   width: 33.33%;
@@ -42,20 +45,24 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
 .logo {
   width: 210px;
 }
+
 .menu {
   display: flex;
   align-items: center;
   gap: 38px;
 }
+
 .menu a {
   color: #694329;
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
 }
+
 .btn-ajuda {
   background: #d5d5d5;
   padding: 2px 22px;
@@ -79,27 +86,33 @@ body {
   justify-content: space-between;
   gap: 20px;
 }
+
 .sect-denuncias .texts {
   display: flex;
   flex-direction: column;
   gap: 30px;
   flex: 1;
 }
+
 .sect-denuncias .texts h1 {
   color: #478a00;
   font-size: 54px;
 }
+
 .sect-denuncias .texts .warning {
   display: flex;
   gap: 10px;
   align-items: center;
 }
+
 .sect-denuncias .texts .warning span {
   color: #bb230b;
 }
+
 .sect-denuncias .texts .warning img {
   width: 70px;
 }
+
 .sect-denuncias .landing-image {
   width: 100%;
   max-width: 600px;
@@ -113,6 +126,7 @@ body {
   gap: 20px;
   padding: 35px;
 }
+
 .titulo h1 {
   background-color: #ebc848;
   text-align: center;
@@ -122,6 +136,7 @@ body {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
 .topicos {
   padding: 10px 25px;
   background-color: #fff0b8;
@@ -129,12 +144,14 @@ body {
   border-bottom-right-radius: 15px;
   height: 100%;
 }
+
 .topico {
   padding: 20px 0;
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 .topico i {
   font-size: 28px;
   color: #fff0b8;
@@ -146,6 +163,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .topico h1 {
   font-size: 20px;
   font-weight: 400;
@@ -154,25 +172,31 @@ body {
   background: none;
   padding: 0;
 }
+
 .divisoria {
   background-color: #c5ba8c;
   padding: 1px;
   border-radius: 10px;
 }
+
 .container-2 .titulo h1 {
   background-color: #17366d;
   color: #ffffff;
 }
+
 .container-2 .topicos {
   background-color: #dce8ff;
 }
+
 .container-2 .topico i {
   background-color: #17366d;
   color: #dce8ff;
 }
+
 .container-2 .topico h1 {
   color: #17366d;
 }
+
 .container-2 .divisoria {
   background-color: #9db4e0;
 }
@@ -184,17 +208,20 @@ body {
   overflow: hidden;
   margin-bottom: 80px;
 }
+
 .aviso-imagem {
   flex: 0 0 28%;
   position: relative;
   overflow: hidden;
 }
+
 .aviso-imagem img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .aviso-conteudo {
   background-color: #f2a89a;
   padding: 36px 5%;
@@ -204,17 +231,20 @@ body {
   gap: 12px;
   flex: 1;
 }
+
 .aviso-conteudo h2 {
   font-size: 26px;
   font-weight: 700;
   color: #c0392b;
   line-height: 1.2;
 }
+
 .aviso-linha {
   display: flex;
   align-items: flex-start;
   gap: 14px;
 }
+
 .aviso-icone {
   flex-shrink: 0;
   width: 36px;
@@ -226,17 +256,20 @@ body {
   justify-content: center;
   margin-top: 2px;
 }
+
 .aviso-icone span {
   color: white;
   font-weight: 700;
   font-size: 18px;
   line-height: 1;
 }
+
 .aviso-texto p {
   font-size: 14px;
   color: #3d1a14;
   line-height: 1.6;
 }
+
 .aviso-texto p strong {
   font-weight: 700;
 }
@@ -250,15 +283,18 @@ body {
   background: #1d3f80;
   overflow: hidden;
 }
+
 .denuncia-img {
   flex: 1;
 }
+
 .denuncia-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .denuncia-conteudo {
   flex: 1.2;
   position: relative;
@@ -268,21 +304,25 @@ body {
   justify-content: center;
   color: #fff;
 }
+
 .denuncia-conteudo h2 {
   font-size: 52px;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 12px;
 }
+
 .denuncia-conteudo p {
   font-size: 18px;
   margin-bottom: 35px;
 }
+
 .botoes {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
+
 .btn {
   width: fit-content;
   display: flex;
@@ -297,17 +337,21 @@ body {
   position: relative;
   z-index: 2;
 }
+
 .btn img {
   width: 28px;
   height: 28px;
   object-fit: contain;
 }
+
 .btn-denuncia {
   background: #d9470a;
 }
+
 .btn-whatsapp {
   background: #79bf1f;
 }
+
 .pata-grande {
   position: absolute;
   width: 120px;
@@ -315,6 +359,7 @@ body {
   top: 50px;
   opacity: 0.2;
 }
+
 .pata-pequena {
   position: absolute;
   width: 60px;
@@ -329,16 +374,19 @@ body {
   color: #fff;
   padding: 62px 48px 18px;
 }
+
 .rodape-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 0.8fr;
   gap: 80px;
 }
+
 .rodape h3 {
   font-size: 22px;
   font-weight: 500;
   margin-bottom: 22px;
 }
+
 .mapa {
   width: 100%;
   max-width: 435px;
@@ -347,12 +395,14 @@ body {
   border: 1px solid #9a8b77;
   overflow: hidden;
 }
+
 .mapa iframe {
   width: 100%;
   height: 100%;
   border: 0;
   display: block;
 }
+
 .rodape p {
   font-size: 11px;
   margin-bottom: 13px;
@@ -361,11 +411,13 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .rodape p img {
   width: 18px;
   height: 18px;
   object-fit: contain;
 }
+
 .rodape-botao {
   font-size: 11px;
   margin-bottom: 13px;
@@ -376,37 +428,45 @@ body {
   color: #fff;
   text-decoration: none;
 }
+
 .rodape-botao img {
   width: 18px;
   height: 18px;
   object-fit: contain;
 }
+
 .rodape-botao:hover,
 .redes a:hover {
   opacity: 0.75;
 }
+
 .redes {
   margin-top: 190px;
   text-align: center;
 }
+
 .redes h3 {
   font-size: 24px;
 }
+
 .redes a {
   display: inline-block;
   text-decoration: none;
 }
+
 .redes img {
   width: 25px;
   height: 25px;
   margin: 0 15px;
 }
+
 .linha-rodape {
   width: 100%;
   height: 1px;
   background-color: #9a8b77;
   margin-top: 38px;
 }
+
 .copy {
   width: 100%;
   text-align: center;
@@ -422,20 +482,25 @@ body {
    @media (min-width: 701px) and (max-width: 1024px)
    ======================================================= */
 @media (min-width: 701px) and (max-width: 1024px) {
+
   /* ── Header Padrão ── */
   .cabecalho {
     height: 90px;
     padding: 0 28px;
   }
+
   .logo {
     width: 170px;
   }
+
   .menu {
     gap: 22px;
   }
+
   .menu a {
     font-size: 15px;
   }
+
   .btn-ajuda {
     padding: 2px 16px;
   }
@@ -446,13 +511,16 @@ body {
     min-height: 60vh;
     gap: 15px;
   }
+
   .sect-denuncias .texts h1 {
     font-size: 44px;
     line-height: 50px;
   }
+
   .sect-denuncias .texts p {
     font-size: 14px;
   }
+
   .sect-denuncias .landing-image {
     max-width: 42vw;
   }
@@ -462,9 +530,11 @@ body {
     padding: 24px;
     gap: 16px;
   }
+
   .topico h1 {
     font-size: 16px;
   }
+
   .topico i {
     font-size: 22px;
     padding: 14px;
@@ -474,9 +544,11 @@ body {
   .aviso {
     margin-bottom: 50px;
   }
+
   .aviso-conteudo h2 {
     font-size: 22px;
   }
+
   .aviso-texto p {
     font-size: 13px;
   }
@@ -485,12 +557,15 @@ body {
   .denuncia-conteudo {
     padding: 30px 40px;
   }
+
   .denuncia-conteudo h2 {
     font-size: 38px;
   }
+
   .denuncia-conteudo p {
     font-size: 16px;
   }
+
   .btn {
     font-size: 18px;
     padding: 12px 20px;
@@ -500,27 +575,35 @@ body {
   .rodape {
     padding: 44px 28px 16px;
   }
+
   .rodape-grid {
     grid-template-columns: 1.1fr 1fr 0.8fr;
     gap: 36px;
   }
+
   .rodape h3 {
     font-size: 18px;
     margin-bottom: 16px;
   }
+
   .mapa {
     width: 100%;
     height: 210px;
   }
-  .rodape-botao, .rodape p {
+
+  .rodape-botao,
+  .rodape p {
     font-size: 11px;
   }
+
   .redes {
     margin-top: 80px;
   }
+
   .redes h3 {
     font-size: 18px;
   }
+
   .redes img {
     width: 22px;
     height: 22px;
@@ -533,14 +616,17 @@ body {
    @media (max-width: 900px)
    ======================================================= */
 @media (max-width: 900px) {
+
   /* ── Header Padrão ── */
   .cabecalho {
     height: 60px;
     padding: 0 18px;
   }
+
   .logo {
     width: 125px;
   }
+
   .menu-mobile {
     display: block;
     font-size: 34px;
@@ -549,6 +635,7 @@ body {
     color: #694329;
     cursor: pointer;
   }
+
   .fundo-menu {
     display: none;
     position: fixed;
@@ -556,9 +643,11 @@ body {
     background: rgba(0, 0, 0, .45);
     z-index: 99;
   }
+
   .fundo-menu.ativo {
     display: block;
   }
+
   .menu {
     position: fixed;
     top: 0;
@@ -574,9 +663,11 @@ body {
     gap: 22px;
     transition: .3s;
   }
+
   .menu.ativo {
     right: 0;
   }
+
   .fechar-menu {
     display: block;
     position: absolute;
@@ -597,18 +688,22 @@ body {
     text-align: center;
     gap: 20px;
   }
+
   .sect-denuncias .texts {
     width: 100%;
     align-items: center;
     text-align: center;
   }
+
   .sect-denuncias .texts h1 {
     font-size: 40px;
     margin-top: 0;
   }
+
   .sect-denuncias .texts .warning {
     justify-content: center;
   }
+
   .sect-denuncias .landing-image {
     width: 80%;
     max-width: 320px;
@@ -617,9 +712,11 @@ body {
 
   /* ── Tabelas ── */
   .tables {
-    grid-template-columns: 1fr; /* Empilha as duas tabelas verticalmente */
+    grid-template-columns: 1fr;
+    /* Empilha as duas tabelas verticalmente */
     padding: 20px;
   }
+
   .topico h1 {
     font-size: 18px;
   }
@@ -629,23 +726,28 @@ body {
     flex-direction: column;
     margin-bottom: 40px;
   }
+
   .aviso-imagem {
     height: 200px;
     width: 100%;
     flex: none;
   }
+
   .aviso-conteudo {
     padding: 24px 20px;
   }
+
   .aviso-conteudo h2 {
     font-size: 22px;
     text-align: center;
   }
+
   .aviso-linha {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
   .aviso-icone {
     margin-bottom: 10px;
   }
@@ -654,86 +756,152 @@ body {
   .denuncia {
     flex-direction: column;
   }
+
   .denuncia-img {
     height: 250px;
     width: 100%;
     flex: none;
   }
+
   .denuncia-conteudo {
     padding: 30px 20px;
     text-align: center;
     align-items: center;
   }
+
   .denuncia-conteudo h2 {
     font-size: 32px;
   }
+
   .denuncia-conteudo p {
     font-size: 16px;
   }
+
   .botoes {
     width: 100%;
     max-width: 350px;
   }
+
   .btn {
     width: 100%;
     justify-content: center;
     font-size: 18px;
   }
+
   .pata-grande {
     width: 90px;
     top: 20px;
     right: 10px;
   }
+
   .pata-pequena {
     width: 45px;
     right: 10px;
     bottom: 10px;
   }
 
-  /* ── Footer Padrão ── */
+  /* ── Footer ── */
   .rodape {
     padding: 32px 18px 14px;
   }
+
   .rodape-grid {
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
   .rodape h3 {
     font-size: 16px;
     margin-bottom: 12px;
   }
+
   .mapa {
-    width: 100%;
-    max-width: 100%;
     height: 160px;
   }
-  .rodape-botao, .rodape p {
+
+  .rodape-botao {
     font-size: 12px;
     gap: 8px;
     margin-bottom: 10px;
-    justify-content: center; /* Alinha ícones + texto centralizados no mobile */
   }
-  .rodape-botao img, .rodape p img {
+
+  .rodape-botao img {
     width: 16px;
     height: 16px;
   }
+
   .redes {
     margin-top: 8px;
-    text-align: center; /* Centraliza as redes sociais no mobile */
+    text-align: left;
   }
+
   .redes h3 {
     font-size: 16px;
   }
+
   .redes img {
     width: 22px;
     height: 22px;
-    margin: 0 8px;
+    margin: 0 8px 0 0;
   }
+
   .linha-rodape {
     margin-top: 24px;
   }
+
   .copy {
     font-size: 8px;
     margin-top: 10px;
+
+    .redes h3 {
+      font-size: 16px;
+    }
+
+    .redes img {
+      width: 22px;
+      height: 22px;
+      margin: 0 8px 0 0;
+    }
+
+    .linha-rodape {
+      margin-top: 24px;
+    }
+
+    .copy {
+      font-size: 8px;
+      margin-top: 10px;
+    }
+
+
+    .rodape-botao img,
+    .rodape p img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .redes {
+      margin-top: 8px;
+      text-align: center;
+      /* Centraliza as redes sociais no mobile */
+    }
+
+    .redes h3 {
+      font-size: 16px;
+    }
+
+    .redes img {
+      width: 22px;
+      height: 22px;
+      margin: 0 8px;
+    }
+
+    .linha-rodape {
+      margin-top: 24px;
+    }
+
+    .copy {
+      font-size: 8px;
+      margin-top: 10px;
+    }
   }
 }
